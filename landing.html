@@ -504,4 +504,92 @@
         <li><span class="check check-e">✓</span> Everything in Standard</li>
         <li><span class="check check-e">✓</span> Multi-technician job assignment</li>
         <li><span class="check check-e">✓</span> Revenue analytics dashboard</li>
-  
+        <li><span class="check check-e">✓</span> Priority customer support</li>
+        <li><span class="check check-e">✓</span> Early access to all new features</li>
+        <li><span class="check check-e">✓</span> More features coming soon...</li>
+      </ul>
+      <div style="display:block;text-align:center;font-family:'Space Grotesk',sans-serif;font-size:0.92rem;font-weight:600;padding:13px 0;border-radius:8px;color:var(--teal);border:1px solid var(--teal);opacity:0.6;cursor:not-allowed;">
+        🔒 Notify Me When Available
+      </div>
+    </div>
+  </div>
+
+  <p class="pricing-footnote">
+    <strong>Beta testers pay nothing during the testing period.</strong><br>
+    Your plan selection locks your rate when billing begins. No credit card required to register.
+  </p>
+</section>
+
+<section id="beta-strip">
+  <h2>Built by a detailer.<br>For detailers.</h2>
+  <p>DetailerLogic Pro was engineered from 31 years of hands-on detailing experience. No bloat. No guessing. Just the tools that actually move the needle on the job site.</p>
+  <a class="btn-primary" href="https://app.detailerlogic.com">Launch the App →</a>
+</section>
+
+<footer>
+  <div class="footer-logo">Detailer<span>Logic</span> Pro</div>
+  <p>© 2026 DetailerLogic Pro · Bensalem, PA · All rights reserved.</p>
+  <div style="display:flex;gap:20px;flex-wrap:wrap;">
+    <a href="https://app.detailerlogic.com" style="color:var(--violet);text-decoration:none;font-size:0.8rem;">Launch App</a>
+    <a href="/privacy-policy.html" style="color:var(--muted);text-decoration:none;font-size:0.8rem;">Privacy Policy</a>
+    <a href="/terms-of-service.html" style="color:var(--muted);text-decoration:none;font-size:0.8rem;">Terms of Service</a>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    const canvas = document.getElementById('hero-canvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, rings = [], dots = [];
+
+    function resize() {
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+
+    function init() {
+      resize(); rings = []; dots = [];
+      for (let i = 0; i < 60; i++) {
+        dots.push({
+          x: Math.random() * W, y: Math.random() * H,
+          r: Math.random() * 1.5 + 0.5, a: Math.random() * 0.5 + 0.1
+        });
+      }
+    }
+
+    const ox = () => W * 0.5;
+    const oy = () => H * 0.48;
+    let lastRing = 0;
+
+    function spawnRing(now) {
+      if (now - lastRing > 1600) { rings.push({ r: 4, alpha: 0.7 }); lastRing = now; }
+    }
+
+    function draw(ts) {
+      ctx.clearRect(0, 0, W, H);
+      ctx.strokeStyle = 'rgba(33,150,243,0.07)';
+      ctx.lineWidth = 1;
+      const step = 60;
+      for (let x = 0; x < W + step; x += step) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+      for (let y = 0; y < H + step; y += step) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+      dots.forEach(d => { ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2); ctx.fillStyle = `rgba(33,150,243,${d.a})`; ctx.fill(); });
+      ctx.beginPath(); ctx.arc(ox(), oy(), 4, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(45,212,191,0.9)'; ctx.shadowColor = '#2DD4BF'; ctx.shadowBlur = 12; ctx.fill(); ctx.shadowBlur = 0;
+      spawnRing(ts);
+      rings = rings.filter(ring => ring.alpha > 0.01);
+      rings.forEach(ring => {
+        ctx.beginPath(); ctx.arc(ox(), oy(), ring.r, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(45,212,191,${ring.alpha})`; ctx.lineWidth = 1.5; ctx.stroke();
+        ring.r += 2.2; ring.alpha *= 0.97;
+      });
+      requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', init);
+    init();
+    requestAnimationFrame(draw);
+  })();
+</script>
+
+</body>
+</html>
