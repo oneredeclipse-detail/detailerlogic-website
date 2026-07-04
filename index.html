@@ -357,11 +357,15 @@
       max-width: 500px; margin: 0 auto 36px; line-height: 1.7;
     }
 
-    footer {
-      background: var(--base); border-top: 1px solid var(--border);
-      padding: 36px 5vw; display: flex; align-items: center;
-      justify-content: space-between; flex-wrap: wrap; gap: 16px;
-    }
+    <footer>
+  <div class="footer-logo">Detailer<span>Logic</span> Pro</div>
+  <p>© 2026 DetailerLogic Pro · Bensalem, PA · All rights reserved.</p>
+  <div style="display:flex;gap:20px;flex-wrap:wrap;">
+    <a href="https://app.detailerlogic.com" style="color:var(--violet);text-decoration:none;font-size:0.8rem;">Launch App</a>
+    <a href="/privacy-policy.html" style="color:var(--muted);text-decoration:none;font-size:0.8rem;">Privacy Policy</a>
+    <a href="/terms-of-service.html" style="color:var(--muted);text-decoration:none;font-size:0.8rem;">Terms of Service</a>
+  </div>
+</footer>
     .footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; color: var(--text); }
     .footer-logo span { color: var(--violet); }
     footer p { font-size: 0.8rem; color: var(--muted); }
