@@ -378,6 +378,53 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; transition: none !important; }
     }
+    /* ── MARINE SECTION ─────────────────────────────────────────── */
+    #marine { padding-top: 20px; }
+    .marine-block {
+      display: grid; grid-template-columns: 1.2fr 1fr;
+      gap: 40px; max-width: 1100px; margin: 0 auto;
+      align-items: center;
+    }
+    .marine-copy {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 14px; padding: 36px 34px;
+      position: relative; overflow: hidden;
+    }
+    .marine-copy::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--teal), transparent);
+    }
+    .marine-copy h3 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem;
+      font-weight: 700; color: var(--teal); margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    .marine-copy p { color: var(--text-dim); line-height: 1.7; margin-bottom: 20px; }
+    .marine-example {
+      background: rgba(45,212,191,0.06);
+      border: 1px solid rgba(45,212,191,0.25);
+      border-radius: 10px; padding: 18px 20px; margin-top: 4px;
+    }
+    .marine-example-label {
+      font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--teal); margin-bottom: 8px;
+    }
+    .marine-example p { margin: 0; font-size: 0.95rem; color: var(--text); line-height: 1.6; }
+    .marine-features { list-style: none; display: grid; gap: 14px; }
+    .marine-features li {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 1rem; color: var(--text);
+    }
+    .check-t {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+      font-size: 0.75rem; background: rgba(45,212,191,0.15); color: var(--teal);
+    }
+    @media (max-width: 768px) {
+      .marine-block { grid-template-columns: 1fr; gap: 24px; }
+    }
+
   </style>
 </head>
 <body>
@@ -461,6 +508,33 @@
         <li>Marine &amp; automotive dual-mode quoting</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section id="marine">
+  <div class="features-header">
+    <div class="section-tag">Not Just Cars</div>
+    <h2 class="section-heading">Built for boats, too.</h2>
+    <p class="section-sub">Most detailing apps forget the water entirely. DetailerLogic prices marine work the way boat detailers actually quote it — by the foot, by the condition, by the job.</p>
+  </div>
+
+  <div class="marine-block">
+    <div class="marine-copy">
+      <h3>Marine Mode</h3>
+      <p>Flip to Marine Mode and quote vessels on their own terms. Set a per-foot base rate, stack the services the job needs, and factor in real-world hull condition — gelcoat oxidation, chalking, waterline staining, and algae. No forcing a boat into a car-shaped pricing box.</p>
+      <div class="marine-example">
+        <div class="marine-example-label">Example</div>
+        <p>A 25-foot center console with heavy gelcoat oxidation: set your per-foot rate, add compound &amp; polish plus oxidation removal, apply the condition factor, and hand the customer a clean, itemized quote in under a minute.</p>
+      </div>
+    </div>
+    <ul class="marine-features">
+      <li><span class="check check-t">✓</span> Per-foot base rate pricing</li>
+      <li><span class="check check-t">✓</span> Stackable marine services</li>
+      <li><span class="check check-t">✓</span> Gelcoat &amp; oxidation condition factors</li>
+      <li><span class="check check-t">✓</span> Custom marine service menu</li>
+      <li><span class="check check-t">✓</span> One-tap toggle between auto &amp; marine</li>
+      <li><span class="check check-t">✓</span> Same invoicing, client history &amp; scheduling</li>
+    </ul>
   </div>
 </section>
 
