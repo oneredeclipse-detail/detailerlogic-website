@@ -266,14 +266,17 @@
     .beta-banner strong { color: #fff; }
 
     .pricing-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 28px; max-width: 860px; margin: 0 auto 56px;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; max-width: 1100px; margin: 0 auto 56px;
     }
 
     .pricing-card {
       background: var(--card-bg); border: 1px solid var(--border);
       border-radius: 16px; padding: 40px 36px; position: relative;
       transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    @media (max-width: 1040px) and (min-width: 821px) {
+      .pricing-card { padding: 36px 22px; }
     }
     .pricing-card.featured {
       border-color: var(--violet);
@@ -520,7 +523,7 @@
 
   <div class="marine-block">
     <div class="marine-copy">
-      <h3>Marine Mode</h3>
+      <h3>Marine Mode <span style="font-size:0.7em;font-weight:600;color:var(--teal);letter-spacing:0.04em;">· Pro &amp; Shop</span></h3>
       <p>Flip to Marine Mode and quote vessels on their own terms. Set a per-foot base rate, stack the services the job needs, and factor in real-world hull condition — gelcoat oxidation, chalking, waterline staining, and algae. No forcing a boat into a car-shaped pricing box.</p>
       <div class="marine-example">
         <div class="marine-example-label">Example</div>
@@ -541,55 +544,70 @@
 <section id="pricing">
   <div class="pricing-header">
     <div class="section-tag">Pricing</div>
-    <h2 class="section-heading">Two tiers. Zero guesswork.</h2>
-    <p class="section-sub">14-day free trial, then $29.95/month. No contracts. Cancel anytime.</p>
+    <h2 class="section-heading">Three plans. Pick your size.</h2>
+    <p class="section-sub">Your 14-day free trial includes everything in Pro. No contracts. Cancel anytime.</p>
   </div>
 
   <div class="pricing-grid">
     <div class="pricing-card">
-      <div class="tier-name">Standard</div>
+      <div class="tier-name">Solo</div>
       <div class="tier-price"><sup>$</sup>29<sup style="font-size:1.2rem">.95</sup></div>
-      <div class="tier-cadence">per month · billed monthly</div>
-      <p class="tier-desc">Everything a solo operator needs to quote confidently, protect their schedule, and close more jobs — without a spreadsheet in sight.</p>
+      <div class="tier-cadence">per month · just starting out</div>
+      <p class="tier-desc">The full pricing engine. Quote confidently, get paid, and stop guessing what to charge.</p>
       <ul class="tier-features">
+        <li><span class="check check-v">✓</span> Instant pricing engine &amp; quotes</li>
         <li><span class="check check-v">✓</span> Hyper-local ZIP rate lookup</li>
-        <li><span class="check check-v">✓</span> Live weather safeguards</li>
-        <li><span class="check check-v">✓</span> Condition multiplier engine</li>
-        <li><span class="check check-v">✓</span> Marine &amp; automotive quoting</li>
-        <li><span class="check check-v">✓</span> Invoice generation &amp; PDF export</li>
-        <li><span class="check check-v">✓</span> Text clients a pay link — get paid by card*</li>
-        <li><span class="check check-v">✓</span> Client history &amp; notes</li>
-        <li><span class="check check-v">✓</span> CSV data export for QuickBooks</li>
-        <li><span class="check check-v">✓</span> Mobile-first dashboard</li>
+        <li><span class="check check-v">✓</span> Condition &amp; size multipliers</li>
+        <li><span class="check check-v">✓</span> Clients, invoices &amp; receipts</li>
+        <li><span class="check check-v">✓</span> Card payments, tips &amp; QR code*</li>
+        <li><span class="check check-v">✓</span> Your own Instant Quote Page</li>
+        <li><span class="check check-v">✓</span> 1% card fee</li>
       </ul>
       <a class="tier-cta cta-ghost-violet" href="https://app.detailerlogic.com">Start 14-Day Free Trial</a>
     </div>
 
     <div class="pricing-card featured">
-      <div class="featured-badge" style="background:var(--teal);color:#000;">Coming Soon</div>
-      <div class="tier-name">Elite</div>
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700;color:var(--teal);margin-bottom:4px;letter-spacing:-0.02em;">Pricing TBA</div>
-      <div class="tier-cadence">coming soon</div>
-      <p class="tier-desc">A tier for detailers running a crew. We're building it now — and we'd rather build what you'd actually use than guess.</p>
+      <div class="featured-badge">Most Popular</div>
+      <div class="tier-name">Pro</div>
+      <div class="tier-price"><sup>$</sup>59</div>
+      <div class="tier-cadence">per month · full-time owner-operator</div>
+      <p class="tier-desc">Everything that brings clients back and builds your name — rebooking, reviews, and your brand front and center.</p>
       <ul class="tier-features">
-        <li><span class="check check-e">✓</span> Everything in Standard</li>
-        <li><span class="check check-e">✓</span> Half the card fee — 0.5% instead of 1%</li>
-        <li><span class="check check-e">→</span> Crew scheduling &amp; job assignment</li>
-        <li><span class="check check-e">→</span> Revenue analytics — what actually pays</li>
-        <li><span class="check check-e">→</span> Your ideas here</li>
+        <li><span class="check check-v">✓</span> Everything in Solo</li>
+        <li><span class="check check-v">✓</span> Rebooking reminders</li>
+        <li><span class="check check-v">✓</span> Google review requests</li>
+        <li><span class="check check-v">✓</span> Marine &amp; boat quoting</li>
+        <li><span class="check check-v">✓</span> Earnings reports &amp; CSV export</li>
+        <li><span class="check check-v">✓</span> Your brand only — no &ldquo;Powered by&rdquo;</li>
+        <li><span class="check check-v">✓</span> Half the card fee — 0.5%</li>
       </ul>
-      <a class="tier-cta" href="mailto:support@detailerlogic.com?subject=Elite%20tier%20—%20what%20I'd%20want" style="display:block;text-align:center;font-family:'Space Grotesk',sans-serif;font-size:0.92rem;font-weight:600;padding:13px 0;border-radius:8px;color:var(--teal);border:1px solid var(--teal);text-decoration:none;">
-        Tell us what you'd want in it
+      <a class="tier-cta cta-solid-violet" href="https://app.detailerlogic.com">Start 14-Day Free Trial</a>
+    </div>
+
+    <div class="pricing-card">
+      <div class="featured-badge" style="background:var(--teal);color:#000;">Coming Soon</div>
+      <div class="tier-name">Shop</div>
+      <div class="tier-price"><sup>$</sup>99</div>
+      <div class="tier-cadence">per month · 2+ technicians</div>
+      <p class="tier-desc">For detailers running a crew. We're building it now with input from the shops on the waitlist.</p>
+      <ul class="tier-features">
+        <li><span class="check check-e">✓</span> Everything in Pro</li>
+        <li><span class="check check-e">→</span> Technician logins &amp; job assignment</li>
+        <li><span class="check check-e">→</span> QC sign-off with photo report to clients</li>
+        <li><span class="check check-e">→</span> Lowest card fee — 0.25%</li>
+      </ul>
+      <a class="tier-cta" href="https://app.detailerlogic.com" style="color:var(--teal);border:1px solid var(--teal);">
+        Join the Waitlist
       </a>
     </div>
   </div>
 
   <p class="pricing-footnote">
     <strong>Try free for 14 days.</strong><br>
-    After your trial, it's just $29.95/month. Cancel anytime.
+    Then choose Solo ($29.95/mo) or Pro ($59/mo). Switch plans anytime.
   </p>
   <p class="pricing-footnote" style="margin-top:12px;font-size:0.82rem;opacity:.8;">
-    *Card payments go straight to your own Stripe account. Stripe's standard processing fee applies, plus a 1% DetailerLogic platform fee per payment (0.5% on Elite). <a href="terms-of-service.html" style="color:inherit;text-decoration:underline;">Details</a>
+    *Card payments go straight to your own Stripe account. Stripe's standard processing fee applies, plus a DetailerLogic platform fee per payment: 1% on Solo, 0.5% on Pro, 0.25% on Shop. <a href="terms-of-service.html" style="color:inherit;text-decoration:underline;">Details</a>
   </p>
 </section>
 
