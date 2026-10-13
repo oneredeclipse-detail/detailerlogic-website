@@ -450,6 +450,9 @@
       .marine-block { grid-template-columns: 1fr; gap: 24px; }
     }
 
+    .sw-label { display:block; font-size:.78rem; font-weight:600; color:var(--muted); margin:12px 0 6px; letter-spacing:.02em; }
+    .sw-input { width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--border); background:rgba(7,8,15,.6); color:var(--text); font:inherit; font-size:16px; }
+    .sw-input:focus { outline:none; border-color:var(--teal); }
   </style>
 </head>
 <body>
@@ -618,7 +621,21 @@
         <li><span class="check check-e">✓</span> QC sign-off with photo report to clients</li>
         <li><span class="check check-e">✓</span> Lowest card fee — 0.25%*</li>
       </ul>
-      <a class="tier-cta" href="https://app.detailerlogic.com" style="color:var(--teal);border:1px solid var(--teal);">Join the Waitlist</a>
+      <button type="button" class="tier-cta" id="sw-open" onclick="openShopWaitlist()" style="color:var(--teal);border:1px solid var(--teal);background:none;cursor:pointer;font:inherit;width:100%;">Join the Waitlist</button>
+      <form id="sw-form" onsubmit="return submitShopWaitlist(event)" style="display:none;margin-top:4px;text-align:left;">
+        <label for="sw-email" class="sw-label">Email *</label>
+        <input id="sw-email" class="sw-input" type="email" required autocomplete="email" placeholder="you@yourshop.com">
+        <label for="sw-biz" class="sw-label">Shop name</label>
+        <input id="sw-biz" class="sw-input" type="text" autocomplete="organization" placeholder="Your shop">
+        <label for="sw-techs" class="sw-label">How many technicians?</label>
+        <input id="sw-techs" class="sw-input" type="number" min="1" max="999" inputmode="numeric" placeholder="e.g. 3">
+        <input id="sw-website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+        <div id="sw-err" style="display:none;color:#f87171;font-size:.85rem;margin:8px 0 0;"></div>
+        <button type="submit" id="sw-submit" class="tier-cta" style="background:var(--teal);color:#000;border:none;cursor:pointer;font:inherit;font-weight:700;width:100%;margin-top:14px;">Add me to the waitlist</button>
+      </form>
+      <div id="sw-done" style="display:none;margin-top:4px;padding:14px;border:1px solid var(--teal);border-radius:10px;color:var(--text);font-size:.92rem;line-height:1.5;">
+        <strong style="color:var(--teal);">✓ You’re on the list.</strong><br>We’ll reach out before Shop launches, with founding pricing locked in.
+      </div>
     </div>
   </div>
 
@@ -702,5 +719,42 @@
   })();
 </script>
 
+<script>
+// Shop waitlist: no login — saves to the DetailerLogic app (shop_leads table).
+var SW_API = /(^|\.)detailerlogic\.com$/.test(location.hostname)
+  ? 'https://app.detailerlogic.com/api/shop-interest'
+  : 'https://detail-logic-staging.vercel.app/api/shop-interest';   // preview deploys test against staging
+var swOpenedAt = 0;
+function openShopWaitlist() {
+  document.getElementById('sw-open').style.display = 'none';
+  document.getElementById('sw-form').style.display = 'block';
+  swOpenedAt = Date.now();
+  setTimeout(function () { document.getElementById('sw-email').focus(); }, 50);
+}
+async function submitShopWaitlist(e) {
+  e.preventDefault();
+  var err = document.getElementById('sw-err'), btn = document.getElementById('sw-submit');
+  err.style.display = 'none';
+  btn.disabled = true; btn.textContent = 'Saving…';
+  try {
+    var r = await fetch(SW_API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+      email: document.getElementById('sw-email').value,
+      biz: document.getElementById('sw-biz').value,
+      techs: document.getElementById('sw-techs').value,
+      website: document.getElementById('sw-website').value,
+      t: Date.now() - swOpenedAt
+    }) });
+    var j = {}; try { j = await r.json(); } catch (x) {}
+    if (!r.ok || !j.ok) throw new Error(j.error || 'Could not save right now. Email support@detailerlogic.com and we’ll add you.');
+    document.getElementById('sw-form').style.display = 'none';
+    document.getElementById('sw-done').style.display = 'block';
+  } catch (x) {
+    err.textContent = x.message || 'Could not save right now. Email support@detailerlogic.com and we’ll add you.';
+    err.style.display = 'block';
+    btn.disabled = false; btn.textContent = 'Add me to the waitlist';
+  }
+  return false;
+}
+</script>
 </body>
 </html>
