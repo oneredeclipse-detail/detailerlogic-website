@@ -156,6 +156,8 @@ a{color:inherit}
 .fb .pair{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;align-items:start}
 .fb.flip .pair{grid-template-columns:minmax(0,1fr) 240px}
 .fb .pair.solo{grid-template-columns:minmax(0,1fr)}
+.fb .rain{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px;align-items:start;margin-bottom:28px}
+.fb .rain img{width:100%;aspect-ratio:auto;object-fit:contain}
 .fb.flip .pair img{order:2}
 .fb ul{list-style:none;display:flex;flex-direction:column;gap:14px}
 .fb li{padding-left:22px;position:relative}
@@ -272,6 +274,8 @@ a{color:inherit}
   .feat h2{position:static;font-size:clamp(3rem,13vw,5rem)}
   .fb .pair,.fb.flip .pair{grid-template-columns:minmax(0,1fr)}
   .fb.flip .pair img{order:0}
+  .fb .rain{grid-template-columns:minmax(0,1fr)}
+  .fb .rain img{width:100%;aspect-ratio:auto}
   .fb img{width:min(100%,320px);aspect-ratio:4/3}
   .fb{margin-bottom:72px}
   .ticket{grid-template-columns:minmax(0,1fr)}
@@ -410,8 +414,11 @@ a{color:inherit}
     <div>
       <div class="fb" data-reveal>
         <h3>Rain warnings on mobile jobs</h3>
-        <div class="pair">
-          <img src="img/wx3.jpg" width="720" height="1560" loading="lazy" alt="A weather warning in the app: 70% chance of rain on Wednesday for Jess Kowalski, with a Send reschedule request button">
+        <div class="rain">
+          <img src="img/rain-job.jpg" width="720" height="726" loading="lazy" alt="The app's 5-day forecast with Wednesday at 70% rain, and Jess Kowalski's job tomorrow flagged with a Weather Warning button">
+          <img src="img/rain-text.jpg" width="720" height="499" loading="lazy" alt="Tapping Weather Warning: 70% chance of rain on Wednesday, with a Send reschedule request button that texts the client for a dry day">
+        </div>
+        <div class="pair solo">
           <ul><li>7-day forecast checked against every booked mobile job</li><li>Flags anything at 40% rain or more</li><li>One tap writes the reschedule text</li><li>A heads-up on your phone the night before</li></ul>
         </div>
       </div>
@@ -498,7 +505,7 @@ a{color:inherit}
       </form>
     </div>
   </div>
-  <p class="fee-note">Every plan starts with 14 days of Pro, no card. Cancel anytime. Card payments go straight to your own Stripe account: Stripe's fee plus a DetailerLogic fee per payment (1% Weekend, 0.5% Pro, 0.25% Shop), never on tips. <a href="/terms-of-service.html">Terms</a></p>
+  <p class="fee-note">Every plan starts with 14 days of Pro, no card. Cancel anytime. Card payments go straight to your own Stripe account. Our fee (1% Weekend, 0.5% Pro, 0.25% Shop) is taken from the job amount only, never from the tip. Stripe's own processing fee applies to the whole card charge. <a href="/terms-of-service.html">Terms</a></p>
 </section>
 
 <section class="faq" aria-labelledby="faq-h">
@@ -508,7 +515,7 @@ a{color:inherit}
       <details name="faq" open><summary>Do I need a card for the trial?<span class="pm" aria-hidden="true"></span></summary><p class="ans">No. You get 14 days of everything in Pro without a card. Pick a plan when you're ready, or don't.</p></details>
       <details name="faq"><summary>I already have prices. Do I start over?<span class="pm" aria-hidden="true"></span></summary><p class="ans">No. Send a photo of your price list, a link to your site or Facebook, or just your 3 most common jobs. We load them within 24 hours, exactly as you charge now.</p></details>
       <details name="faq"><summary>iPhone or Android?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Both. It runs in your phone's browser. Add it to your home screen and it opens like any other app.</p></details>
-      <details name="faq"><summary>How do card payments work?<span class="pm" aria-hidden="true"></span></summary><p class="ans">You connect your own Stripe account and the money goes straight to you. Stripe takes its standard fee, plus our fee of 1% on Weekend or 0.5% on Pro. Tips are never charged.</p></details>
+      <details name="faq"><summary>How do card payments work?<span class="pm" aria-hidden="true"></span></summary><p class="ans">You connect your own Stripe account and the money goes straight to you. Our fee is 1% on Weekend or 0.5% on Pro, and it's taken from the job amount only. We never take a cut of the tip. Stripe's own processing fee applies to the whole card charge, the same as any card reader.</p></details>
       <details name="faq"><summary>Where does the suggested hourly rate come from?<span class="pm" aria-hidden="true"></span></summary><p class="ans">From the income level of your ZIP code and how long you've been detailing. It's a starting point. You set your own rate and can change it any time.</p></details>
       <details name="faq"><summary>What happens when it rains?<span class="pm" aria-hidden="true"></span></summary><p class="ans">The app checks the 7-day forecast against your booked mobile jobs and flags any day at 40% rain or more. One tap writes the reschedule text, and your phone can warn you the night before.</p></details>
       <details name="faq"><summary>Can I cancel?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Any time, no contract. The Founding guarantee stands on top of that: 3 paid jobs in 60 days or every dollar back, if you did your part.</p></details>
