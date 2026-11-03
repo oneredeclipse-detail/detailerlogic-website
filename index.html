@@ -1,789 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Auto Detailing Quote &amp; Pricing App | DetailerLogic Pro</title>
-  <meta name="description" content="Quote and price auto detailing jobs in seconds. Pricing app built for mobile detailers: condition multipliers, ZIP pricing, rain warnings, card payments. 14-day free trial." />
-  <link rel="canonical" href="https://www.detailerlogic.com/" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="DetailerLogic Pro" />
-  <meta property="og:title" content="Auto Detailing Quote &amp; Pricing App | DetailerLogic Pro" />
-  <meta property="og:description" content="Quote and price auto detailing jobs in seconds. Pricing app built for mobile detailers: condition multipliers, ZIP pricing, rain warnings, card payments. 14-day free trial." />
-  <meta property="og:url" content="https://www.detailerlogic.com/" />
-  <meta property="og:image" content="https://www.detailerlogic.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Auto Detailing Quote &amp; Pricing App | DetailerLogic Pro" />
-  <meta name="twitter:description" content="Quote and price auto detailing jobs in seconds. Pricing app built for mobile detailers: condition multipliers, ZIP pricing, rain warnings, card payments. 14-day free trial." />
-  <meta name="twitter:image" content="https://www.detailerlogic.com/og-image.png" />
-  <meta name="theme-color" content="#07080F" />
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"DetailerLogic Pro",
-   "applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android",
-   "url":"https://www.detailerlogic.com/",
-   "description":"Pricing and quoting app built for mobile auto detailers.",
-   "offers":[{"@type":"Offer","name":"Weekend","price":"29.95","priceCurrency":"USD"},
-             {"@type":"Offer","name":"Pro","price":"59.00","priceCurrency":"USD"}],
-   "publisher":{"@type":"Organization","name":"DetailerLogic","url":"https://www.detailerlogic.com/","email":"support@detailerlogic.com"}}
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto Detailing Quote &amp; Pricing App | DetailerLogic Pro</title>
+<meta name="description" content="Quote and price auto detailing jobs in the driveway. Pricing app built by a detailer with 31 years in the trade: inside and outside condition, vehicle sizes, rain warnings, rebooking reminders, card payments. 14-day free trial.">
+<link rel="canonical" href="https://www.detailerlogic.com/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DetailerLogic Pro">
+<meta property="og:title" content="Auto Detailing Quote &amp; Pricing App | DetailerLogic Pro">
+<meta property="og:description" content="Quote and price auto detailing jobs in the driveway. Built by a detailer with 31 years in the trade. 14-day free trial, no card.">
+<meta property="og:url" content="https://www.detailerlogic.com/">
+<meta property="og:image" content="https://www.detailerlogic.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Auto Detailing Quote &amp; Pricing App | DetailerLogic Pro">
+<meta name="twitter:description" content="Quote and price auto detailing jobs in the driveway. Built by a detailer with 31 years in the trade. 14-day free trial, no card.">
+<meta name="twitter:image" content="https://www.detailerlogic.com/og-image.png">
+<meta name="theme-color" content="#07080F">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DetailerLogic Pro",
+ "applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android",
+ "url":"https://www.detailerlogic.com/",
+ "description":"Pricing, quoting and booking app built for mobile auto detailers.",
+ "offers":[{"@type":"Offer","name":"Weekend","price":"29.95","priceCurrency":"USD"},
+           {"@type":"Offer","name":"Pro","price":"59.00","priceCurrency":"USD"},
+           {"@type":"Offer","name":"Pro yearly","price":"497.00","priceCurrency":"USD"}],
+ "publisher":{"@type":"Organization","name":"DetailerLogic","url":"https://www.detailerlogic.com/","email":"support@detailerlogic.com"}}
+</script>
+<link rel="preload" href="fonts/bigshoulders-800.woff" as="font" type="font/woff" crossorigin>
+<script>document.documentElement.classList.add('js');</script>
+<style>
+@font-face{font-family:'Big Shoulders';src:url(fonts/bigshoulders-800.woff) format('woff');font-weight:800;font-display:swap}
+@font-face{font-family:'Public Sans';src:url(fonts/publicsans.woff) format('woff');font-weight:400 600;font-display:swap}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07080F; --ink:#F2F4F8; --muted:#B4BDCB; --surface:#141724; --surface-2:#1C2030;
+  --accent:#2196F3; --on-accent:#07080F; --paper:#F2F4F8; --on-paper:#07080F;
+  --amber:#F5A524; --green:#2FBF62; --red:#F0524A;
+  --display:'Big Shoulders','Arial Narrow',Impact,sans-serif;
+  --text:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --step-small:clamp(.875rem,.85rem + .1vw,.9375rem);
+  --step-body:clamp(1.0625rem,1rem + .25vw,1.1875rem);
+  --step-lead:clamp(1.25rem,1.1rem + .7vw,1.625rem);
+  --step-head:clamp(3rem,1.6rem + 6vw,6.5rem);
+  --m:clamp(16px,2.4vw,32px);
+  --gap:clamp(80px,9vw,128px);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--text);font-size:var(--step-body);line-height:1.55;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{padding-left:var(--m);padding-right:var(--m)}
+.disp{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.005em;line-height:.88}
+.h2{font-size:var(--step-head)}
+.lead{font-size:var(--step-lead);line-height:1.4;max-width:34ch}
+.small{font-size:var(--step-small);color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px;font:600 var(--step-body)/1 var(--text);text-decoration:none;border:0;cursor:pointer;background:var(--accent);color:var(--on-accent);transition:transform .15s var(--ease-out),background-color .2s ease,color .2s ease}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn:active{transform:scale(.97)}
+.btn.dark{background:var(--bg);color:var(--ink)}
+.btn.dark:hover{background:var(--ink);color:var(--bg)}
+.tlink{text-decoration:underline;text-decoration-color:transparent;text-underline-offset:.2em;text-decoration-thickness:.08em;transition:text-decoration-color .2s ease}
+.tlink:hover{text-decoration-color:currentColor}
 
-    :root {
-      --base:       #07080F;
-      --navy:       #0D1B3E;
-      --indigo:     #1A1040;
-      --violet:     #2196F3;
-      --violet-dim: #1565C0;
-      --teal:       #2DD4BF;
-      --teal-dim:   #1A9E8F;
-      --text:       #E2E8F0;
-      --muted:      #94A3B8;
-      --border:     rgba(33, 150, 243, 0.18);
-      --card-bg:    rgba(13, 27, 62, 0.55);
-      --glow:       rgba(33, 150, 243, 0.22);
-    }
+/* nav */
+.nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:22px var(--m)}
+.wordmark{font-family:var(--display);font-weight:800;font-size:1.6rem;text-transform:uppercase;text-decoration:none;letter-spacing:.01em}
+.wordmark span{color:var(--accent)}
+.nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+.nav ul a{text-decoration:none;font-size:var(--step-body)}
+.nav .navcta{color:var(--accent);font-weight:600}
 
-    html { scroll-behavior: smooth; }
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:1fr auto;column-gap:var(--m);padding:110px var(--m) 32px}
+.hero h1{grid-column:1;align-self:center;font-size:clamp(4rem,10.4vw,12rem);white-space:nowrap}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.hero h1 [data-line]{display:block}
+.hero h1 .l2{color:var(--accent)}
+.hero .photo{grid-column:2;grid-row:1/3;align-self:center;justify-self:end;width:min(100%,520px);transform:rotate(3.5deg)}
+.hero .photo img{width:100%;aspect-ratio:1856/2300;object-fit:cover}
+.hero .photo figcaption{font-size:var(--step-small);color:var(--muted);margin-top:12px;transform:rotate(-3.5deg)}
+.hero .bottom{grid-column:1;grid-row:2;display:flex;flex-wrap:wrap;align-items:flex-end;gap:28px 40px}
+.hero .bottom p{font-size:var(--step-lead);line-height:1.4;max-width:30ch}
+.hero .facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:18px;font-size:var(--step-small);color:var(--muted)}
+.hero .facts b{color:var(--ink);font-weight:600}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--base);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+/* driveway calculator */
+.calc{background:var(--accent);color:var(--on-accent);padding:var(--gap) var(--m)}
+.calc-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:start}
+.calc h2{font-size:var(--step-head);margin-bottom:24px}
+.calc .lead{margin-bottom:48px;max-width:40ch}
+.ctrl{margin-bottom:28px}
+.ctrl-label{font-weight:600;margin-bottom:10px;display:block}
+.seg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.seg button{min-height:56px;border:0;background:rgba(7,8,15,.14);color:var(--on-accent);font:600 var(--step-body)/1.15 var(--text);cursor:pointer;padding:8px 6px;transition:background-color .2s ease,color .2s ease,transform .15s var(--ease-out)}
+.seg button:hover{background:rgba(7,8,15,.26)}
+.seg button:active{transform:scale(.97)}
+.seg button[aria-pressed="true"]{background:var(--bg);color:var(--ink)}
+.seg button small{display:block;font-weight:400;font-size:var(--step-small);opacity:.85;margin-top:2px}
+.pet{display:flex;align-items:center;gap:12px;font-weight:600;cursor:pointer;min-height:48px}
+.pet input{width:26px;height:26px;accent-color:var(--bg)}
+.receipt{background:var(--bg);color:var(--ink);padding:32px}
+.receipt .rl{display:flex;justify-content:space-between;gap:16px;padding:10px 0;font-variant-numeric:tabular-nums}
+.receipt .rl span:first-child{color:var(--muted)}
+.receipt .total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:18px;padding-bottom:18px;border-bottom:4px solid var(--surface-2)}
+.receipt .total .disp{font-size:clamp(3.5rem,7vw,6rem);color:var(--green);font-variant-numeric:tabular-nums}
+.receipt .vs{margin-top:20px;font-size:var(--step-body);line-height:1.5}
+.receipt .vs b{color:var(--amber)}
+.calc .shot{width:min(100%,380px);justify-self:center;transform:rotate(-3deg);margin-top:40px}
+.calc .note{margin-top:22px;font-size:var(--step-small)}
 
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 5vw;
-      height: 64px;
-      background: rgba(7, 8, 15, 0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
+/* board */
+.board-sec{padding:var(--gap) 0 calc(var(--gap) * .6)}
+.board-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--m);align-items:end;margin-bottom:56px}
+.board-head p{max-width:40ch}
+.board{display:flex;flex-direction:column;gap:4px;padding:0 12px;-webkit-mask:none}
+.row{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,2fr) minmax(0,1.3fr) minmax(0,1.6fr);align-items:center;gap:16px;min-height:72px;padding:0 20px;background:var(--surface);font-size:clamp(1.0625rem,.6rem + 1.1vw,1.75rem);font-variant-numeric:tabular-nums;cursor:pointer;border:0;color:inherit;text-align:left;font-family:var(--text);width:100%;transition:background-color .2s ease}
+.row:hover{background:var(--surface-2)}
+.row .nm{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .f{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .amt{text-align:right}
+.st{justify-self:end;padding:6px 12px;font-size:var(--step-small);font-weight:600;color:#07080F;white-space:nowrap}
+.st.req{background:var(--amber)} .st.rain{background:#C42B24;color:#fff} .st.ok{background:var(--accent)} .st.unpaid{background:var(--amber)} .st.paid{background:var(--green)} .st.due{background:var(--ink)}
+.row[aria-expanded="true"]{background:var(--accent);color:var(--on-accent);min-height:200px;align-items:start;padding-top:24px;padding-bottom:24px}
+.row[aria-expanded="true"] .f{color:var(--on-accent)}
+.row .detail{display:none;grid-column:1/-1;font-size:var(--step-body);line-height:1.5;max-width:60ch}
+.row[aria-expanded="true"] .detail{display:block}
+.row[aria-expanded="true"] .nm{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2.2rem,4vw,3.6rem);line-height:.9}
+.board-note{padding:20px var(--m) 0}
 
-    .nav-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.15rem;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      text-decoration: none;
-    }
-    .nav-logo span { color: var(--violet); }
+/* verbs */
+.verb{position:relative;min-height:88svh;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--m);padding:96px var(--m);align-items:center}
+.verb.light{background:var(--paper);color:var(--on-paper)}
+.verb.dark{background:var(--bg);color:var(--ink)}
+.verb .word{font-size:clamp(6rem,15vw,15rem)}
+.verb .say{font-size:var(--step-lead);line-height:1.4;max-width:30ch;margin-top:32px}
+.verb .phone{justify-self:center;width:min(100%,400px)}
+.verb .phone img{width:100%;box-shadow:none}
+.verb-intro{padding:var(--gap) var(--m) 56px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--m);align-items:end}
+.verb-intro p{max-width:40ch}
 
-    .nav-cta {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: var(--violet);
-      text-decoration: none;
-      border: 1px solid var(--violet);
-      padding: 7px 18px;
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
-    }
-    .nav-cta:hover { background: var(--violet); color: #fff; }
+/* features */
+.feat{background:var(--surface);padding:var(--gap) var(--m)}
+.feat-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--m)}
+.feat h2{position:sticky;top:32px;align-self:start;font-size:clamp(3.5rem,7vw,7.5rem)}
+.feat h2 + p{margin-top:24px}
+.fb{margin-bottom:72px}
+.fb:last-child{margin-bottom:0}
+.fb h3{font-size:clamp(1.5rem,1.2rem + 1vw,2rem);font-weight:600;margin-bottom:24px;line-height:1.2}
+.fb .pair{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;align-items:start}
+.fb.flip .pair{grid-template-columns:minmax(0,1fr) 240px}
+.fb .pair.solo{grid-template-columns:minmax(0,1fr)}
+.fb.flip .pair img{order:2}
+.fb ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.fb li{padding-left:22px;position:relative}
+.fb li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:10px;background:var(--accent)}
+.fb img{width:240px;aspect-ratio:3/4;object-fit:cover;object-position:top}
 
-    #hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 120px 5vw 80px;
-      overflow: hidden;
-    }
+/* ticket */
+.pricing{background:var(--paper);color:var(--on-paper);padding:var(--gap) var(--m)}
+.price-head{max-width:1200px;margin:0 auto 64px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--m);align-items:end}
+.price-head h2{font-size:var(--step-head)}
+.ticket{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3fr);background:var(--bg);color:var(--ink);max-width:1200px;margin:0 auto}
+.ticket .main{padding:44px}
+.ticket .main h3{font-size:clamp(3rem,5.5vw,5.5rem);margin-bottom:14px}
+.ticket .main .sub{font-size:var(--step-lead);margin-bottom:32px;max-width:36ch}
+.ticket ul{list-style:none;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 32px}
+.ticket li{padding-left:22px;position:relative}
+.ticket li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:10px;background:var(--accent)}
+.ticket .promise{margin-top:32px;padding:22px 24px;background:var(--surface-2)}
+.ticket .promise b{display:block;font-size:var(--step-lead);margin-bottom:6px;color:var(--green)}
+.ticket .stub{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;padding:44px 28px;background:var(--accent);color:var(--on-accent);text-align:center}
+.ticket .stub .price{font-size:clamp(4rem,7vw,7rem)}
+.ticket .stub .alt{font-weight:600}
+.ticket .stub .btn{width:100%;margin-top:16px}
+.ticket .perf{position:absolute;top:0;bottom:0;left:70%;width:0}
+.ticket .perf::before,.ticket .perf::after{content:"";position:absolute;left:-14px;width:28px;height:28px;border-radius:50%;background:var(--paper)}
+.ticket .perf::before{top:-14px} .ticket .perf::after{bottom:-14px}
+.ticket-note{max-width:68ch;margin:20px 0 0 max(0px,calc((100% - 1200px) / 2));font-size:var(--step-small);color:#3b4252}
+.plans{max-width:1200px;margin:96px auto 0}
+.plans h3{font-size:clamp(2.4rem,4vw,4rem);margin-bottom:28px}
+.plan{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.3fr) minmax(0,4fr) auto;gap:24px;align-items:center;padding:28px 0;border-bottom:4px solid #d5dae3}
+.plan .pn{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2rem,3vw,2.8rem);line-height:.9}
+.plan .pp{font-size:var(--step-lead);font-weight:600;font-variant-numeric:tabular-nums}
+.plan .pp small{display:block;font-size:var(--step-small);font-weight:400;color:#3b4252}
+.plan .btn{background:var(--on-paper);color:var(--paper)}
+.plan .btn:hover{background:var(--accent);color:var(--on-accent)}
+.sw-form{grid-column:1/-1;display:none;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:12px;align-items:end}
+.sw-form label{display:block;font-size:var(--step-small);font-weight:600;margin-bottom:6px}
+.sw-form input{width:100%;min-height:52px;padding:0 14px;font:inherit;border:2px solid #9aa3b2;background:#fff;color:var(--on-paper)}
+.hp{position:absolute;left:-9999px;opacity:0;pointer-events:none}
+.sw-msg{grid-column:1/-1;display:none;font-weight:600}
+.fee-note{max-width:68ch;margin:32px 0 0 max(0px,calc((100% - 1200px) / 2));font-size:var(--step-small);color:#3b4252}
 
-    #hero-canvas {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      pointer-events: none; z-index: 0; opacity: 0.45;
-    }
+/* faq */
+.faq{padding:var(--gap) var(--m)}
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:var(--m)}
+.faq h2{position:sticky;top:96px;align-self:start;font-size:clamp(3rem,5vw,5.5rem)}
+.faq details{background:var(--surface);margin-bottom:8px;transition:background-color .2s ease}
+.faq details[open]{background:var(--accent);color:var(--on-accent)}
+.faq summary{list-style:none;cursor:pointer;min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 24px;font-size:1.25rem;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{position:relative;width:16px;height:16px;flex:none}
+.faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;left:0;top:6.5px;width:16px;height:3px;background:currentColor;transition:transform .3s var(--ease-out)}
+.faq summary .pm::after{transform:rotate(90deg)}
+.faq details[open] .pm::after{transform:rotate(0)}
+.faq .ans{padding:0 24px 24px;max-width:58ch}
+.faq .ans a{color:inherit}
 
-    #hero::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 50% 50%,
-        rgba(7,8,15,0) 0%, rgba(7,8,15,0.55) 60%, rgba(7,8,15,0.95) 100%);
-      z-index: 1;
-    }
+/* cta */
+.cta{background:var(--accent);color:var(--on-accent);min-height:90svh;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:var(--m);padding:96px var(--m) 64px;align-items:end}
+.cta h2{font-size:clamp(4rem,9vw,9rem)}
+.cta .say{font-size:var(--step-lead);margin-top:24px;max-width:30ch;line-height:1.4}
+.dlg{align-self:center;justify-self:center;width:min(100%,440px);background:#111;color:#fff;border-radius:22px;padding:28px;box-shadow:0 30px 60px rgba(0,0,0,.35); /* taste-skill-ignore: data-ui dialog */font-family:var(--text)}
+.dlg h3{font-size:1.4rem;line-height:1.25;margin-bottom:6px}
+.dlg p{color:#aab;font-size:1rem;margin-bottom:18px}
+.dlg .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dlg label{font-size:.9375rem;color:#ccd;display:block;margin-bottom:6px}
+.dlg input{width:100%;min-height:52px;border-radius:12px;border:1px solid #333;background:#1b1b1b;color:#fff;font:600 1.15rem var(--text);padding:0 14px}
+.dlg .out{margin:18px 0;padding:16px;border-radius:12px;background:#1b1b1b;font-size:1.05rem;line-height:1.45}
+.dlg .out b{font-size:1.6rem;display:block;color:var(--green)}
+.dlg .btn{width:100%;border-radius:12px;background:var(--accent);color:#07080F}
 
-    .hero-inner { position: relative; z-index: 2; max-width: 800px; }
+/* footer */
+.foot{min-height:90svh;display:flex;flex-direction:column;justify-content:space-between;padding:40px var(--m) 28px;background:var(--bg)}
+.foot .top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:var(--step-small);color:var(--muted)}
+.foot .top p{max-width:56ch}
+.foot .mail{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(3rem,10.5vw,12rem);line-height:.88;text-decoration:none;display:block;margin:80px 0 40px;overflow-wrap:anywhere}
+.foot .mail:hover{color:var(--accent)}
+.foot .meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:var(--step-small);color:var(--muted)}
+.foot .meta a{color:var(--muted)}
 
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--teal);
-      border: 1px solid rgba(45, 212, 191, 0.3);
-      background: rgba(45, 212, 191, 0.07);
-      padding: 5px 14px; border-radius: 100px; margin-bottom: 28px;
-    }
-    .eyebrow::before {
-      content: ''; width: 6px; height: 6px; border-radius: 50%;
-      background: var(--teal); box-shadow: 0 0 6px var(--teal);
-      animation: pulse-dot 2s ease-in-out infinite;
-    }
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.7); }
-    }
+/* motion */
+@media (prefers-reduced-motion:no-preference){
+  .js .hero h1 [data-line]{transform:translateY(105%);animation:line-up .9s var(--ease-out) forwards;animation-delay:calc(var(--i) * 110ms + 120ms)}
+  .js .hero .photo{animation:drop 1.1s var(--ease-out) .35s both}
+  .js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease-out),transform .9s var(--ease-out);transition-delay:calc(var(--d,0) * 80ms)}
+  .js [data-reveal].is-in{opacity:1;transform:none}
+  .js .row[data-reveal]{transform:translateX(-24px)}
+  .js .row[data-reveal].is-in{transform:none}
+  .hero .photo img{animation:drift 14s ease-in-out 1.5s infinite alternate}
+}
+@keyframes line-up{to{transform:none}}
+@keyframes drop{from{opacity:0;transform:translateY(40px) rotate(8deg)}to{opacity:1;transform:rotate(3.5deg)}}
+@keyframes drift{from{transform:scale(1)}to{transform:scale(1.035)}}
 
-    h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.4rem, 6vw, 4.2rem);
-      font-weight: 700; line-height: 1.1;
-      letter-spacing: -0.03em; margin-bottom: 24px; color: #fff;
-    }
-    h1 em { font-style: normal; color: var(--violet); }
-
-    .hero-sub {
-      font-size: clamp(1rem, 2vw, 1.2rem); color: var(--muted);
-      max-width: 580px; margin: 0 auto 40px;
-      font-weight: 400; line-height: 1.7;
-    }
-
-    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-
-    .btn-primary {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem; font-weight: 600; letter-spacing: 0.02em;
-      color: #fff; background: var(--violet); border: none;
-      padding: 14px 32px; border-radius: 8px; cursor: pointer;
-      text-decoration: none; display: inline-block;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 0 24px rgba(33,150,243,0.35);
-    }
-    .btn-primary:hover {
-      background: var(--violet-dim);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 32px rgba(33,150,243,0.55);
-    }
-
-    .btn-ghost {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem; font-weight: 500;
-      color: var(--muted); background: transparent;
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      padding: 14px 28px; border-radius: 8px; cursor: pointer;
-      text-decoration: none; display: inline-block;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .btn-ghost:hover { border-color: var(--muted); color: var(--text); }
-
-    .hero-stat-row {
-      display: flex; gap: 40px; justify-content: center;
-      flex-wrap: wrap; margin-top: 56px; padding-top: 40px;
-      border-top: 1px solid var(--border);
-    }
-    .hero-stat { text-align: center; }
-    .hero-stat .val {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.8rem; font-weight: 700; color: #fff; line-height: 1;
-    }
-    .hero-stat .val span { color: var(--violet); }
-    .hero-stat .label {
-      font-size: 0.78rem; color: var(--muted); margin-top: 4px;
-      letter-spacing: 0.05em; text-transform: uppercase;
-    }
-
-    section { padding: 96px 5vw; }
-
-    .section-tag {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.72rem; font-weight: 700;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--violet); margin-bottom: 12px;
-    }
-    .section-heading {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700;
-      letter-spacing: -0.02em; line-height: 1.15;
-      color: #fff; margin-bottom: 16px;
-    }
-    .section-sub { color: var(--muted); font-size: 1.05rem; max-width: 520px; line-height: 1.7; }
-
-    #features { background: linear-gradient(180deg, var(--base) 0%, #0A0D1A 100%); }
-    .features-header { text-align: center; margin-bottom: 64px; }
-    .features-header .section-sub { margin: 0 auto; }
-
-    .features-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 24px; max-width: 1100px; margin: 0 auto;
-    }
-
-    .feature-card {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: 14px; padding: 36px 30px;
-      position: relative; overflow: hidden;
-      transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
-    }
-    .feature-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, transparent, var(--violet), transparent);
-      opacity: 0; transition: opacity 0.3s;
-    }
-    .feature-card:hover {
-      border-color: rgba(33,150,243,0.5);
-      box-shadow: 0 8px 40px var(--glow);
-      transform: translateY(-4px);
-    }
-    .feature-card:hover::before { opacity: 1; }
-
-    .feature-icon {
-      width: 52px; height: 52px; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; margin-bottom: 24px;
-    }
-    .icon-violet { background: rgba(33, 150, 243, 0.15); }
-    .icon-teal   { background: rgba(45, 212, 191, 0.12); }
-    .icon-indigo { background: rgba(33, 150, 243, 0.12); }
-
-    .feature-card h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.15rem; font-weight: 600; color: #fff;
-      margin-bottom: 12px; letter-spacing: -0.01em;
-    }
-    .feature-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
-
-    .feature-detail {
-      margin-top: 20px; padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .feature-detail li {
-      font-size: 0.82rem; color: var(--muted);
-      list-style: none; padding: 4px 0; padding-left: 16px; position: relative;
-    }
-    .feature-detail li::before {
-      content: '—'; position: absolute; left: 0;
-      color: var(--violet); font-weight: 700;
-    }
-
-    #pricing {
-      background: #0A0D1A;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .pricing-header { text-align: center; margin-bottom: 64px; }
-    .pricing-header .section-sub { margin: 0 auto; }
-
-    .beta-banner {
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      background: rgba(45, 212, 191, 0.08);
-      border: 1px solid rgba(45, 212, 191, 0.25);
-      border-radius: 10px; padding: 14px 24px;
-      margin: 0 auto 48px; max-width: 620px;
-      font-size: 0.9rem; color: var(--teal); font-weight: 500;
-    }
-    .beta-banner strong { color: #fff; }
-
-    .pricing-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 24px; max-width: 1140px; margin: 0 auto 56px; align-items: start;
-    }
-
-    .pricing-card {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: 16px; padding: 40px 30px; position: relative;
-      transition: border-color 0.25s, box-shadow 0.25s;
-    }
-    .pricing-card.featured {
-      border-color: var(--violet);
-      box-shadow: 0 0 40px var(--glow), inset 0 0 80px rgba(33,150,243,0.04);
-    }
-
-    .featured-badge {
-      position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--base); background: var(--violet);
-      padding: 4px 16px; border-radius: 100px; white-space: nowrap;
-    }
-
-    .tier-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 16px;
-    }
-    .tier-price {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 3rem; font-weight: 700; color: #fff;
-      letter-spacing: -0.03em; line-height: 1; margin-bottom: 4px;
-    }
-    .tier-price sup { font-size: 1.4rem; vertical-align: super; font-weight: 500; color: var(--muted); }
-    .tier-cadence { font-size: 0.85rem; color: var(--muted); margin-bottom: 28px; }
-    .tier-desc {
-      font-size: 0.9rem; color: var(--muted); line-height: 1.65;
-      padding-bottom: 28px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      margin-bottom: 28px;
-    }
-
-    .tier-features { list-style: none; margin-bottom: 36px; }
-    .tier-features li {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: 0.88rem; color: var(--text); padding: 6px 0;
-    }
-    .tier-features li .check {
-      flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.65rem; font-weight: 700; margin-top: 2px;
-    }
-    .check-v { background: rgba(33,150,243,0.2); color: var(--violet); }
-    .check-e { background: rgba(45,212,191,0.15); color: var(--teal); }
-
-    .tier-cta {
-      display: block; text-align: center;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.92rem; font-weight: 600; letter-spacing: 0.02em;
-      padding: 13px 0; border-radius: 8px; text-decoration: none;
-      transition: all 0.2s;
-    }
-    .cta-ghost-violet { color: var(--violet); border: 1px solid var(--violet); }
-    .cta-ghost-violet:hover { background: var(--violet); color: #fff; }
-    .cta-solid-violet {
-      background: var(--violet); color: #fff; border: 1px solid transparent;
-      box-shadow: 0 0 20px rgba(33,150,243,0.3);
-    }
-    .cta-solid-violet:hover {
-      background: var(--violet-dim);
-      box-shadow: 0 4px 28px rgba(33,150,243,0.5);
-      transform: translateY(-2px);
-    }
-
-    .pricing-footnote { text-align: center; font-size: 0.82rem; color: var(--muted); }
-    .pricing-footnote strong { color: var(--teal); }
-
-    #beta-strip {
-      background: linear-gradient(135deg, #0D1B3E 0%, #1A1040 50%, #0D1B3E 100%);
-      border-top: 1px solid var(--border);
-      text-align: center; padding: 80px 5vw;
-    }
-    #beta-strip h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700;
-      letter-spacing: -0.02em; color: #fff; margin-bottom: 16px;
-    }
-    #beta-strip p {
-      color: var(--muted); font-size: 1rem;
-      max-width: 500px; margin: 0 auto 36px; line-height: 1.7;
-    }
-
-    footer {
-      background: var(--base); border-top: 1px solid var(--border);
-      padding: 36px 5vw; display: flex; align-items: center;
-      justify-content: space-between; flex-wrap: wrap; gap: 16px;
-    }
-    .footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; color: var(--text); }
-    .footer-logo span { color: var(--violet); }
-    footer p { font-size: 0.8rem; color: var(--muted); }
-
-    @media (max-width: 820px) {
-      .features-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
-      .pricing-grid  { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto 48px; gap: 36px; }
-    }
-    @media (max-width: 540px) {
-      nav { padding: 0 20px; }
-      section { padding: 72px 20px; }
-      .hero-stat-row { gap: 24px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; }
-    }
-    /* ── MARINE SECTION ─────────────────────────────────────────── */
-    #marine { padding-top: 20px; }
-    #rebook { padding-top: 20px; }
-    .marine-block {
-      display: grid; grid-template-columns: 1.2fr 1fr;
-      gap: 40px; max-width: 1100px; margin: 0 auto;
-      align-items: center;
-    }
-    .marine-copy {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: 14px; padding: 36px 34px;
-      position: relative; overflow: hidden;
-    }
-    .marine-copy::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, transparent, var(--teal), transparent);
-    }
-    .marine-copy h3 {
-      font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem;
-      font-weight: 700; color: var(--teal); margin-bottom: 16px;
-      letter-spacing: -0.02em;
-    }
-    .marine-copy p { color: var(--text-dim); line-height: 1.7; margin-bottom: 20px; }
-    .marine-example {
-      background: rgba(45,212,191,0.06);
-      border: 1px solid rgba(45,212,191,0.25);
-      border-radius: 10px; padding: 18px 20px; margin-top: 4px;
-    }
-    .marine-example-label {
-      font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem;
-      font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
-      color: var(--teal); margin-bottom: 8px;
-    }
-    .marine-example p { margin: 0; font-size: 0.95rem; color: var(--text); line-height: 1.6; }
-    .marine-features { list-style: none; display: grid; gap: 14px; }
-    .marine-features li {
-      display: flex; align-items: center; gap: 12px;
-      font-size: 1rem; color: var(--text);
-    }
-    .check-t {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
-      font-size: 0.75rem; background: rgba(45,212,191,0.15); color: var(--teal);
-    }
-    @media (max-width: 768px) {
-      .marine-block { grid-template-columns: 1fr; gap: 24px; }
-    }
-
-    .sw-label { display:block; font-size:.78rem; font-weight:600; color:var(--muted); margin:12px 0 6px; letter-spacing:.02em; }
-    .sw-input { width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--border); background:rgba(7,8,15,.6); color:var(--text); font:inherit; font-size:16px; }
-    .sw-input:focus { outline:none; border-color:var(--teal); }
-  </style>
+/* phone */
+@media (max-width:900px){
+  .nav ul li:not(.keep){display:none}
+  .hero{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto;padding-top:96px;row-gap:28px}
+  .hero h1{font-size:clamp(3rem,16.5vw,7rem)}
+  .hero .photo{grid-column:1;grid-row:3;justify-self:center;width:min(86%,420px);transform:rotate(3deg)}
+  .hero .bottom{grid-row:2}
+  .hero .bottom .btn{width:100%}
+  .calc-grid,.board-head,.feat-grid,.faq-grid,.cta,.verb-intro,.price-head{grid-template-columns:minmax(0,1fr)}
+  .calc-grid > div + div{margin-top:40px}
+  .seg button{min-height:60px;font-size:1rem}
+  .calc .shot{width:min(80%,320px)}
+  .board{padding:0 8px}
+  .row{grid-template-columns:minmax(0,1fr) auto;min-height:64px;font-size:1.25rem;padding:0 14px}
+  .row .f,.row .amt{display:none}
+  .row[aria-expanded="true"] .f,.row[aria-expanded="true"] .amt{display:block;grid-column:1/-1;font-size:1rem;text-align:left}
+  .verb{grid-template-columns:minmax(0,1fr);min-height:auto;padding:80px var(--m)}
+  .verb .word{position:static;font-size:clamp(5rem,24vw,9rem)}
+  .verb .phone{width:min(80%,320px)}
+  .feat h2{position:static;font-size:clamp(3rem,13vw,5rem)}
+  .fb .pair,.fb.flip .pair{grid-template-columns:minmax(0,1fr)}
+  .fb.flip .pair img{order:0}
+  .fb img{width:min(100%,320px);aspect-ratio:4/3}
+  .fb{margin-bottom:72px}
+  .ticket{grid-template-columns:minmax(0,1fr)}
+  .ticket .main{padding:28px 22px}
+  .ticket ul{grid-template-columns:minmax(0,1fr)}
+  .ticket .perf{left:0;right:0;top:auto;bottom:auto;width:auto;height:0;position:relative}
+  .ticket .perf::before{top:-14px;left:-14px} .ticket .perf::after{top:-14px;bottom:auto;left:auto;right:-14px}
+  .plan{grid-template-columns:minmax(0,1fr) auto}
+  .plan .pd{grid-column:1/-1}
+  .plan .btn{grid-column:1/-1;width:100%}
+  .sw-form{grid-template-columns:minmax(0,1fr)}
+  .faq h2{position:static;font-size:clamp(3rem,13vw,5rem)}
+  .faq summary{font-size:1.125rem;min-height:64px;padding:14px 20px}
+  .cta{min-height:auto;align-items:start;padding-top:128px}
+  .cta h2{font-size:clamp(3.6rem,15vw,6rem)}
+  .foot .mail{font-size:clamp(2.4rem,12.5vw,6rem)}
+}
+</style>
 </head>
 <body>
 
-<nav>
-  <a class="nav-logo" href="#">Detailer<span>Logic</span> Pro</a>
-  <a class="nav-cta" href="https://app.detailerlogic.com">Launch App</a>
+<nav class="nav" aria-label="Main">
+  <a class="wordmark" href="#top">Detailer<span>Logic</span> Pro</a>
+  <ul>
+    <li><a class="tlink" href="#quote">See the math</a></li>
+    <li><a class="tlink" href="#how">How it works</a></li>
+    <li><a class="tlink" href="#founding">Pricing</a></li>
+    <li class="keep"><a class="tlink navcta" href="https://app.detailerlogic.com">Log in</a></li>
+  </ul>
 </nav>
 
-<section id="hero">
-  <canvas id="hero-canvas"></canvas>
-  <div class="hero-inner">
-    <div class="eyebrow">31 Years in the Trade · Built by a Working Detailer</div>
-    <h1>Stop doing a <span style="white-space:nowrap">6&#8209;hour job</span><br><em>for a 2-hour price.</em></h1>
-    <p class="hero-sub">DetailerLogic Pro prices every car and boat by size and condition, so the trashed SUV costs what it should — and the quote says so, not you. Plus rain warnings on your booked jobs with a one-tap reschedule text, and reminders that bring past clients back.</p>
-    <div class="hero-actions">
-      <a class="btn-primary" href="https://app.detailerlogic.com">Start 14-Day Free Trial</a>
-      <a class="btn-ghost" href="#features">See How It Works</a>
+<main id="top">
+
+<header class="hero">
+  <h1 class="disp" aria-label="6-hour job. 2-hour price? DetailerLogic Pro, the detailing quote app.">
+    <span class="line"><span data-line style="--i:0" aria-hidden="true">6-hour job.</span></span>
+    <span class="line l2"><span data-line style="--i:1" aria-hidden="true">2-hour price?</span></span>
+  </h1>
+  <div class="bottom">
+    <div>
+      <p>DetailerLogic Pro is the quoting app built by a detailer with 31 years in the trade. Price every car and boat right, in the driveway.</p>
+      <div class="facts"><span><b>14 days free</b>, no card</span><span><b>Car + boat</b> in one app</span><span>Built in <b>Bensalem, PA</b></span></div>
     </div>
-    <div class="hero-stat-row">
-      <div class="hero-stat">
-        <div class="val">31<span> yrs</span></div>
-        <div class="label">In the Trade</div>
+    <a class="btn" href="https://app.detailerlogic.com">Start free — 14 days</a>
+  </div>
+  <figure class="photo">
+    <img src="img/driveway.jpg" width="1200" height="1487" alt="A detailer holding a phone in a driveway, showing a DetailerLogic quote of $551.25 in front of a black pickup truck">
+    <figcaption>A real quote screen. Inside heavy, outside standard: $551.25.</figcaption>
+  </figure>
+</header>
+
+<section class="calc" id="quote" aria-labelledby="calc-h">
+  <div class="calc-grid">
+    <div>
+      <h2 class="disp" id="calc-h" data-reveal>Trashed inside.<br>Clean outside.</h2>
+      <p class="lead" data-reveal style="--d:1">So why charge Heavy on the whole car? Price each side for what it is. Try it on a mid-size SUV at $75/hr.</p>
+
+      <div class="ctrl" data-reveal style="--d:2">
+        <span class="ctrl-label" id="out-l">Outside condition</span>
+        <div class="seg" role="group" aria-labelledby="out-l" data-side="out">
+          <button type="button" data-m="1" aria-pressed="true">Standard</button>
+          <button type="button" data-m="1.25" aria-pressed="false">Heavy<small>+25%</small></button>
+          <button type="button" data-m="1.5" aria-pressed="false">Restore<small>+50%</small></button>
+          <button type="button" data-m="2" aria-pressed="false">Extreme<small>+100%</small></button>
+        </div>
       </div>
-      <div class="hero-stat">
-        <div class="val">Car<span> + </span>Boat</div>
-        <div class="label">One App</div>
+      <div class="ctrl" data-reveal style="--d:3">
+        <span class="ctrl-label" id="in-l">Inside condition</span>
+        <div class="seg" role="group" aria-labelledby="in-l" data-side="in">
+          <button type="button" data-m="1" aria-pressed="false">Standard</button>
+          <button type="button" data-m="1.25" aria-pressed="true">Heavy<small>+25%</small></button>
+          <button type="button" data-m="1.5" aria-pressed="false">Restore<small>+50%</small></button>
+          <button type="button" data-m="2" aria-pressed="false">Extreme<small>+100%</small></button>
+        </div>
       </div>
-      <div class="hero-stat">
-        <div class="val">1<span> tap</span></div>
-        <div class="label">Rain Reschedule Text</div>
+      <label class="pet" data-reveal style="--d:4"><input type="checkbox" id="pet" checked> Pet hair — an add-on, never multiplied</label>
+    </div>
+
+    <div>
+      <div class="receipt" data-reveal style="--d:2" aria-live="polite">
+        <div class="total"><span class="disp" id="r-total">$551</span><span>quote total</span></div>
+        <div class="rl"><span>Interior detail · 2.5 h</span><span id="r-in">$281.25</span></div>
+        <div class="rl"><span>Exterior detail · 2 h</span><span id="r-out">$180.00</span></div>
+        <div class="rl" id="r-pet-row"><span>Pet hair removal · 1 h</span><span id="r-pet">$90.00</span></div>
+        <p class="vs" id="r-vs">Charge Heavy on everything and it's <b>$596</b>. That's the $45 that loses the job.</p>
       </div>
-      <div class="hero-stat">
-        <div class="val">14<span> days</span></div>
-        <div class="label">Free · No Card</div>
+      <p class="note">Mid-size SUV adds 20%. In the app it's your rate, your sizes and your services.</p>
+    </div>
+  </div>
+</section>
+
+<section class="board-sec" aria-labelledby="board-h">
+  <div class="board-head wrap">
+    <h2 class="disp h2" id="board-h" data-reveal>Every job.<br>Every dollar.</h2>
+    <p data-reveal style="--d:1">Requests, rain, unpaid jobs and clients due for a detail, on one screen when you wake up. Tap a row. This is a sample day.</p>
+  </div>
+  <div class="board" data-ui role="list">
+    <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:0"><span class="nm">Mike Santos</span><span class="f">2021 Honda Pilot</span><span class="f">Sat</span><span class="amt">$350</span><span class="st req">Request</span><span class="detail">Booked himself from your booking page, saw the price first. Accept and he's on your calendar.</span></button>
+    <button class="row" role="listitem" aria-expanded="true" data-reveal style="--d:1"><span class="nm">Jess Kowalski</span><span class="f">2022 Toyota RAV4</span><span class="f">Wed 9:00</span><span class="amt">$260</span><span class="st rain">Rain 70%</span><span class="detail">70% chance of rain Wednesday on a mobile job. One tap writes the reschedule text, you hit send, and nobody eats a rain day.</span></button>
+    <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:2"><span class="nm">Tom Reyes</span><span class="f">2023 Chevy Tahoe</span><span class="f">Fri 1:30</span><span class="amt">$425</span><span class="st ok">Booked</span><span class="detail">On your Google Calendar with the address. Tap Directions when it's time to roll.</span></button>
+    <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:3"><span class="nm">Ana Lopez</span><span class="f">2019 Honda Civic</span><span class="f">Done</span><span class="amt">$180</span><span class="st unpaid">Unpaid</span><span class="detail">Job's done, money isn't. Get Paid texts her a card link with a tip option.</span></button>
+    <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:4"><span class="nm">Dana Price</span><span class="f">2021 Tesla Model Y</span><span class="f">Card</span><span class="amt">$270</span><span class="st paid">Paid</span><span class="detail">$240 job plus a $30 tip, paid by card. Your phone buzzed the second it landed.</span></button>
+    <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:5"><span class="nm">Lisa Park</span><span class="f">Full detail</span><span class="f">11 mo ago</span><span class="amt">$260</span><span class="st due">Due</span><span class="detail">Hasn't been back in 11 months. One tap opens a text from your own number with her name already in it.</span></button>
+    <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:6"><span class="nm">Rob Diaz</span><span class="f">2018 Ford F-150</span><span class="f">6 mo ago</span><span class="amt">$310</span><span class="st due">Due</span><span class="detail">Six months since his full detail. The app remembers so you don't have to.</span></button>
+  </div>
+</section>
+
+<section aria-labelledby="how-h" id="how">
+  <div class="verb-intro">
+    <h2 class="disp h2" id="how-h" data-reveal>Four taps.</h2>
+    <p data-reveal style="--d:1">From the driveway to the next booking. Every screen here is the real app.</p>
+  </div>
+  <div class="verb light">
+    <div><p class="disp word">Quote</p><p class="say">Size, inside, outside, add-ons. The quote says the price so you don't have to argue it.</p></div>
+    <img class="phone" data-reveal src="img/quote-top.jpg" width="720" height="1560" loading="lazy" alt="The DetailerLogic quote screen with services and an hourly rate">
+  </div>
+  <div class="verb dark">
+    <div><p class="disp word">Book</p><p class="say">Your own booking page. Clients pick the vehicle, see the price and request a day.</p></div>
+    <img class="phone" data-reveal src="img/book2.jpg" width="720" height="1560" loading="lazy" alt="A detailer's booking page showing vehicle sizes, a Full Detail at $315 and a Book my detail button">
+  </div>
+  <div class="verb light">
+    <div><p class="disp word">Get paid</p><p class="say">Card or cash, tips included. The money card shows every dollar still out there.</p></div>
+    <img class="phone" data-reveal src="img/home.jpg" width="720" height="1560" loading="lazy" alt="The DetailerLogic home screen showing $1,630 of money waiting: a quote request, clients due and an unpaid job">
+  </div>
+  <div class="verb dark">
+    <div><p class="disp word">Rebook</p><p class="say">Clients due for a detail show up on their own. One tap texts them from your phone.</p></div>
+    <img class="phone" data-reveal src="img/rebook.jpg" width="720" height="1560" loading="lazy" alt="The Due for a detail list with four past clients and a Text button for each">
+  </div>
+</section>
+
+<section class="feat" aria-labelledby="feat-h">
+  <div class="feat-grid">
+    <div>
+      <h2 class="disp" id="feat-h">Also in the truck.</h2>
+    </div>
+    <div>
+      <div class="fb" data-reveal>
+        <h3>Rain warnings on mobile jobs</h3>
+        <div class="pair">
+          <img src="img/wx3.jpg" width="720" height="1560" loading="lazy" alt="A weather warning in the app: 70% chance of rain on Wednesday for Jess Kowalski, with a Send reschedule request button">
+          <ul><li>7-day forecast checked against every booked mobile job</li><li>Flags anything at 40% rain or more</li><li>One tap writes the reschedule text</li><li>A heads-up on your phone the night before</li></ul>
+        </div>
+      </div>
+      <div class="fb flip" data-reveal>
+        <h3>Am I charging enough?</h3>
+        <div class="pair">
+          <img src="img/ob3.jpg" width="720" height="1560" loading="lazy" alt="The app showing that a $180 SUV detail over 5 hours pays $36 an hour">
+          <ul><li>Your full SUV price and hours, turned into what you really make per hour</li><li>A suggested starting rate from your ZIP's local income and your years in</li><li>You set the rate. The app just does the math</li></ul>
+        </div>
+      </div>
+      <div class="fb" data-reveal>
+        <h3>Boats, by the foot</h3>
+        <div class="pair solo">
+          <ul><li>Marine mode with a per-foot rate</li><li>Gelcoat, oxidation and waterline condition</li><li>Same invoices, clients and schedule as your cars</li></ul>
+        </div>
+      </div>
+      <div class="fb flip" data-reveal>
+        <h3>The rest of the toolbox</h3>
+        <div class="pair">
+          <img src="img/wx1.jpg" width="720" height="1560" loading="lazy" alt="The app's home screen with a 5-day forecast and a weather warning on a booked job">
+          <ul><li>Phone alerts when a client pays or books</li><li>Google Calendar sync, with the address on every job</li><li>Travel fee by distance from your ZIP</li><li>Your own vehicle sizes, % or $ more</li><li>Stain and surface playbook, free on every plan</li></ul>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="features">
-  <div class="features-header">
-    <div class="section-tag">Intelligence Engine</div>
-    <h2 class="section-heading">Three systems.<br>One competitive edge.</h2>
-    <p class="section-sub">DetailerLogic isn't a rate card. It prices every job from your rate, your area and the vehicle in front of you.</p>
+<section class="pricing" id="founding" aria-labelledby="price-h">
+  <div class="price-head">
+    <h2 class="disp" id="price-h" data-reveal>Founding 10.</h2>
+    <p class="lead" data-reveal style="--d:1">Ten detailers get set up by hand. We do the boring part, you send the texts, and the app has to pay for itself.</p>
   </div>
 
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon icon-violet">📍</div>
-      <h3>Hyper-Local ZIP Logic</h3>
-      <p>Not sure what to charge? We suggest a starting hourly rate for your ZIP code — from local income data and the rates other detailers in your area set — and you adjust it to fit your business.</p>
-      <ul class="feature-detail">
-        <li>Suggested rate based on your ZIP&rsquo;s income level</li>
-        <li>Slider to manually adjust your rate</li>
-        <li>Community-driven rate data over time</li>
-        <li>Recommended hourly rate per ZIP, applied across all services</li>
+  <div class="ticket">
+    <div class="main">
+      <h3 class="disp">Done for you</h3>
+      <p class="sub">Everything in Pro, set up by us in your first week.</p>
+      <ul>
+        <li>We load your prices within 24 hours</li>
+        <li>We load your past clients from a screenshot or Square list</li>
+        <li>We build your booking page from 3 photos</li>
+        <li>A 15-minute call: your first quote and first 5 rebooking texts go out together</li>
       </ul>
-    </div>
-
-    <div class="feature-card">
-      <div class="feature-icon icon-teal">🌦️</div>
-      <h3>Weather Safeguards</h3>
-      <p>Rain kills detail quality — and your rep. We check the forecast for your area against your booked jobs and flag rain risk before the day arrives, so you can reschedule early instead of eating the loss.</p>
-      <ul class="feature-detail">
-        <li>7-day forecast checked against every booked job</li>
-        <li>Rain warnings flagged on scheduled jobs</li>
-        <li>One tap drafts a reschedule text — you hit send</li>
-        <li>Never get caught promising a rain-day job</li>
-      </ul>
-    </div>
-
-    <div class="feature-card">
-      <div class="feature-icon icon-indigo">⚡</div>
-      <h3>Condition Multipliers</h3>
-      <p>Customers always say &ldquo;it&rsquo;s not that bad.&rdquo; Pick the size and condition, add pet hair or heavy soil, and the quote shows the charge in black and white — the app is the bad guy, not you.</p>
-      <ul class="feature-detail">
-        <li>4-tier vehicle condition scoring</li>
-        <li>Size class adjustments (compact to XL)</li>
-        <li>Pet hair, heavy soil, and restoration add-ons</li>
-        <li>Marine &amp; automotive dual-mode quoting</li>
-      </ul>
-    </div>
-  </div>
-  <p class="section-sub" style="margin:48px auto 0;text-align:center;">📅 <strong>Google Calendar sync (optional):</strong> connect your Google Calendar and every job you book lands on it automatically — reschedule or cancel in the app and the calendar updates itself. We only touch the events the app creates. <a href="/privacy-policy.html#google" style="color:inherit;text-decoration:underline;">How we handle your Google data</a></p>
-</section>
-
-<section id="marine">
-  <div class="features-header">
-    <div class="section-tag">Not Just Cars</div>
-    <h2 class="section-heading">Built for boats, too.</h2>
-    <p class="section-sub">Most detailing apps forget the water entirely. DetailerLogic prices marine work the way boat detailers actually quote it — by the foot, by the condition, by the job.</p>
-  </div>
-
-  <div class="marine-block">
-    <div class="marine-copy">
-      <h3>Marine Mode</h3>
-      <p>Flip to Marine Mode and quote vessels on their own terms. Set a per-foot base rate, stack the services the job needs, and factor in real-world hull condition — gelcoat oxidation, chalking, waterline staining, and algae. No forcing a boat into a car-shaped pricing box.</p>
-      <div class="marine-example">
-        <div class="marine-example-label">Example</div>
-        <p>A 25-foot center console with heavy gelcoat oxidation: set your per-foot rate, add compound &amp; polish plus oxidation removal, apply the condition factor, and hand the customer a clean, itemized quote in under a minute.</p>
+      <div class="promise">
+        <b>3 paid jobs in 60 days, or every dollar back.</b>
+        Your side: in the first 30 days, send us your prices, add 10 past clients and send the rebooking texts.
       </div>
     </div>
-    <ul class="marine-features">
-      <li><span class="check check-t">✓</span> Per-foot base rate pricing</li>
-      <li><span class="check check-t">✓</span> Stackable marine services</li>
-      <li><span class="check check-t">✓</span> Gelcoat &amp; oxidation condition factors</li>
-      <li><span class="check check-t">✓</span> Custom marine service menu</li>
-      <li><span class="check check-t">✓</span> One-tap toggle between auto &amp; marine</li>
-      <li><span class="check check-t">✓</span> Same invoicing, client history &amp; scheduling</li>
-    </ul>
-  </div>
-</section>
-
-<section id="rebook">
-  <div class="features-header">
-    <div class="section-tag">Repeat Business</div>
-    <h2 class="section-heading">Your easiest money is the client you already have.</h2>
-    <p class="section-sub">Most detailers don’t lose customers to competitors — they lose them by never asking them back. DetailerLogic remembers for you.</p>
-  </div>
-
-  <div class="marine-block">
-    <div class="marine-copy">
-      <h3>Rebooking on Autopilot</h3>
-      <p>Every finished job starts a clock. When a client is due again — based on what you did, from a monthly wash to a 6-month coating check-up — they show up on your home screen under <strong>“Due for a detail.”</strong> One tap opens a ready-to-send text from your own phone, with their name and vehicle already filled in.</p>
-      <div class="marine-example">
-        <div class="marine-example-label">Example</div>
-        <p>A client gets a full detail in March. In July, they appear on your list. One tap, hit send: <em>“Hi Barb! It’s been about 4 months since we detailed your RAV4 — want us to get you on the schedule?”</em> No spreadsheet. No forgetting. Booked.</p>
-      </div>
+    <div class="perf" aria-hidden="true"></div>
+    <div class="stub">
+      <span class="disp price">$59</span>
+      <span class="alt">a month, or $497 a year</span>
+      <a class="btn dark" href="mailto:support@detailerlogic.com?subject=Founding%20spot&amp;body=I%20want%20a%20Founding%20spot.%0A%0ABusiness%20name%3A%20%0APhone%3A%20%0A">Claim a spot</a>
     </div>
-    <ul class="marine-features">
-      <li><span class="check check-t">✓</span> Knows when each client is due — by service</li>
-      <li><span class="check check-t">✓</span> Shows up a week before they’re due</li>
-      <li><span class="check check-t">✓</span> One-tap text from your own number</li>
-      <li><span class="check check-t">✓</span> Snooze or skip — no nagging your clients</li>
-      <li><span class="check check-t">✓</span> Works from your past jobs — nothing to set up</li>
-      <li><span class="check check-t">✓</span> Included in Pro</li>
-    </ul>
   </div>
-</section>
+  <p class="ticket-note">Ten spots. Every setup is done by hand, so when they're gone, they're gone.</p>
 
-<section id="pricing">
-  <div class="pricing-header">
-    <div class="section-tag">Pricing</div>
-    <h2 class="section-heading">Pick the plan that fits your business.</h2>
-    <p class="section-sub">Every plan starts with a 14-day free trial of Pro — no card needed. No contracts. Cancel anytime.</p>
-  </div>
-
-  <div class="pricing-grid">
-    <div class="pricing-card">
-      <div class="tier-name">Weekend</div>
-      <div class="tier-price"><sup>$</sup>29<sup style="font-size:1.2rem">.95</sup></div>
-      <div class="tier-cadence">per month · part-time &amp; weekend</div>
-      <p class="tier-desc">Everything a part-time detailer needs to quote confidently, look professional and get paid.</p>
-      <ul class="tier-features">
-        <li><span class="check check-v">✓</span> Pricing engine — size, condition &amp; area rate suggestions</li>
-        <li><span class="check check-v">✓</span> Quotes, invoices &amp; receipts</li>
-        <li><span class="check check-v">✓</span> Client history &amp; schedule</li>
-        <li><span class="check check-v">✓</span> Card payments, tips &amp; QR code*</li>
-        <li><span class="check check-v">✓</span> Instant Quote Page for your clients</li>
-        <li><span class="check check-v">✓</span> Pro Detailing Playbook</li>
-        <li><span class="check check-v">✓</span> 1% card fee*</li>
-      </ul>
-      <a class="tier-cta cta-ghost-violet" href="https://app.detailerlogic.com">Start Free Trial</a>
+  <div class="plans" aria-labelledby="plans-h">
+    <h3 class="disp" id="plans-h">Or set it up yourself.</h3>
+    <div class="plan">
+      <span class="pn">Weekend</span>
+      <span class="pp">$29.95<small>a month</small></span>
+      <span class="pd">For part-timers. Quotes, invoices, booking page, card payments and tips, the playbook. 1% card fee.</span>
+      <a class="btn" href="https://app.detailerlogic.com">Start free</a>
     </div>
-
-    <div class="pricing-card featured">
-      <div class="featured-badge">Best Value</div>
-      <div class="tier-name">Pro</div>
-      <div class="tier-price"><sup>$</sup>59</div>
-      <div class="tier-cadence">per month · full-time owner-operator</div>
-      <p class="tier-desc">The tools that bring clients back and grow your ticket — built for detailers doing this full time.</p>
-      <ul class="tier-features">
-        <li><span class="check check-v">✓</span> Everything in Weekend</li>
-        <li><span class="check check-v">✓</span> Rebooking reminders — repeat clients on autopilot</li>
-        <li><span class="check check-v">✓</span> Google review requests</li>
-        <li><span class="check check-v">✓</span> Marine &amp; boat quoting</li>
-        <li><span class="check check-v">✓</span> Earnings reports &amp; CSV export</li>
-        <li><span class="check check-v">✓</span> Your brand only — cover photo, no &ldquo;Powered by&rdquo;</li>
-        <li><span class="check check-v">✓</span> <span>Half the card fee — 0.5%*<span style="display:block;font-size:.85em;opacity:.8;margin-top:2px">Take $6,000/mo in cards? That saves $30/mo — about the price difference.</span></span></li>
-      </ul>
-      <a class="tier-cta cta-solid-violet" href="https://app.detailerlogic.com">Start Free Trial</a>
+    <div class="plan">
+      <span class="pn">Pro</span>
+      <span class="pp">$59<small>a month, or $497 a year</small></span>
+      <span class="pd">Full-time. Everything in Weekend plus rebooking reminders, review texts, boats, earnings export, your brand only. 0.5% card fee.</span>
+      <a class="btn" href="https://app.detailerlogic.com">Start free</a>
     </div>
-
-    <div class="pricing-card">
-      <div class="featured-badge" style="background:var(--teal);color:#000;">Coming Soon</div>
-      <div class="tier-name">Shop</div>
-      <div class="tier-price"><sup>$</sup>99</div>
-      <div class="tier-cadence">per month · 2+ technicians</div>
-      <p class="tier-desc">For shops running a team. Founding shops get first access and locked-in pricing.</p>
-      <ul class="tier-features">
-        <li><span class="check check-e">✓</span> Everything in Pro</li>
-        <li><span class="check check-e">✓</span> Technician logins &amp; job assignment</li>
-        <li><span class="check check-e">✓</span> QC sign-off with photo report to clients</li>
-        <li><span class="check check-e">✓</span> Lowest card fee — 0.25%*</li>
-      </ul>
-      <button type="button" class="tier-cta" id="sw-open" onclick="openShopWaitlist()" style="color:var(--teal);border:1px solid var(--teal);background:none;cursor:pointer;font:inherit;width:100%;">Join the Waitlist</button>
-      <form id="sw-form" onsubmit="return submitShopWaitlist(event)" style="display:none;margin-top:4px;text-align:left;">
-        <label for="sw-email" class="sw-label">Email *</label>
-        <input id="sw-email" class="sw-input" type="email" required autocomplete="email" placeholder="you@yourshop.com">
-        <label for="sw-biz" class="sw-label">Shop name</label>
-        <input id="sw-biz" class="sw-input" type="text" autocomplete="organization" placeholder="Your shop">
-        <label for="sw-techs" class="sw-label">How many technicians?</label>
-        <input id="sw-techs" class="sw-input" type="number" min="1" max="999" inputmode="numeric" placeholder="e.g. 3">
-        <input id="sw-website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
-        <div id="sw-err" style="display:none;color:#f87171;font-size:.85rem;margin:8px 0 0;"></div>
-        <button type="submit" id="sw-submit" class="tier-cta" style="background:var(--teal);color:#000;border:none;cursor:pointer;font:inherit;font-weight:700;width:100%;margin-top:14px;">Add me to the waitlist</button>
+    <div class="plan">
+      <span class="pn">Shop</span>
+      <span class="pp">$99<small>coming soon</small></span>
+      <span class="pd">2+ technicians. Tech logins, job assignment, QC sign-off with a photo report. 0.25% card fee.</span>
+      <button class="btn" type="button" id="sw-open">Join the waitlist</button>
+      <form class="sw-form" id="sw-form">
+        <div><label for="sw-email">Email</label><input id="sw-email" type="email" required autocomplete="email" placeholder="you@yourshop.com"></div>
+        <div><label for="sw-biz">Shop name</label><input id="sw-biz" type="text" autocomplete="organization"></div>
+        <div><label for="sw-techs">Technicians</label><input id="sw-techs" type="number" min="1" max="999" inputmode="numeric"></div>
+        <input id="sw-website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+        <button class="btn" type="submit" id="sw-submit">Add me</button>
+        <p class="sw-msg" id="sw-msg" role="status"></p>
       </form>
-      <div id="sw-done" style="display:none;margin-top:4px;padding:14px;border:1px solid var(--teal);border-radius:10px;color:var(--text);font-size:.92rem;line-height:1.5;">
-        <strong style="color:var(--teal);">✓ You’re on the list.</strong><br>We’ll reach out before Shop launches, with founding pricing locked in.
-      </div>
     </div>
   </div>
-
-  <p class="pricing-footnote">
-    <strong>Try Pro free for 14 days.</strong><br>
-    Then choose Weekend or Pro. Switch plans anytime — changes are prorated.
-  </p>
-  <p class="pricing-footnote" style="margin-top:12px;font-size:0.82rem;opacity:.8;">
-    *Card payments go straight to your own Stripe account. Stripe's standard processing fee applies, plus a DetailerLogic platform fee per payment: 1% on Weekend, 0.5% on Pro, 0.25% on Shop. Never on tips. <a href="terms-of-service.html" style="color:inherit;text-decoration:underline;">Details</a>
-  </p>
+  <p class="fee-note">Every plan starts with 14 days of Pro, no card. Cancel anytime. Card payments go straight to your own Stripe account: Stripe's fee plus a DetailerLogic fee per payment (1% Weekend, 0.5% Pro, 0.25% Shop), never on tips. <a href="/terms-of-service.html">Terms</a></p>
 </section>
 
-<section id="beta-strip">
-  <h2>Built by a detailer.<br>For detailers.</h2>
-  <p>DetailerLogic Pro was engineered from 31 years of hands-on detailing experience. No bloat. No guessing. Just the tools that actually move the needle on the job site.</p>
-  <a class="btn-primary" href="https://app.detailerlogic.com">Launch the App →</a>
+<section class="faq" aria-labelledby="faq-h">
+  <div class="faq-grid">
+    <h2 class="disp" id="faq-h">Straight answers.</h2>
+    <div>
+      <details name="faq" open><summary>Do I need a card for the trial?<span class="pm" aria-hidden="true"></span></summary><p class="ans">No. You get 14 days of everything in Pro without a card. Pick a plan when you're ready, or don't.</p></details>
+      <details name="faq"><summary>I already have prices. Do I start over?<span class="pm" aria-hidden="true"></span></summary><p class="ans">No. Send a photo of your price list, a link to your site or Facebook, or just your 3 most common jobs. We load them within 24 hours, exactly as you charge now.</p></details>
+      <details name="faq"><summary>iPhone or Android?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Both. It runs in your phone's browser. Add it to your home screen and it opens like any other app.</p></details>
+      <details name="faq"><summary>How do card payments work?<span class="pm" aria-hidden="true"></span></summary><p class="ans">You connect your own Stripe account and the money goes straight to you. Stripe takes its standard fee, plus our fee of 1% on Weekend or 0.5% on Pro. Tips are never charged.</p></details>
+      <details name="faq"><summary>Where does the suggested hourly rate come from?<span class="pm" aria-hidden="true"></span></summary><p class="ans">From the income level of your ZIP code and how long you've been detailing. It's a starting point. You set your own rate and can change it any time.</p></details>
+      <details name="faq"><summary>What happens when it rains?<span class="pm" aria-hidden="true"></span></summary><p class="ans">The app checks the 7-day forecast against your booked mobile jobs and flags any day at 40% rain or more. One tap writes the reschedule text, and your phone can warn you the night before.</p></details>
+      <details name="faq"><summary>Can I cancel?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Any time, no contract. The Founding guarantee stands on top of that: 3 paid jobs in 60 days or every dollar back, if you did your part.</p></details>
+      <details name="faq"><summary>What do you do with my data?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Your clients and jobs are yours, visible only to your account. Google Calendar sync only touches the events the app creates. <a href="/privacy-policy.html">Privacy policy</a> · <a href="/privacy-policy.html#google">How we handle Google data</a></p></details>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <div class="footer-logo">Detailer<span>Logic</span> Pro</div>
-  <p>© 2026 DetailerLogic Pro · Bensalem, PA · All rights reserved.</p>
-  <p>
-    <a href="https://app.detailerlogic.com" style="color:#2196F3;text-decoration:none;margin-right:16px;">Launch App</a>
-    <a href="/privacy-policy.html" style="color:#ffffff;text-decoration:none;margin-right:16px;">Privacy Policy</a>
-    <a href="/terms-of-service.html" style="color:#ffffff;text-decoration:none;">Terms of Service</a>
-  </p>
+<section class="cta" aria-labelledby="cta-h">
+  <div>
+    <h2 class="disp" id="cta-h">What's your hour worth?</h2>
+    <p class="say">Put in your full SUV detail. That's the first thing the app asks, too. Then start free, no card.</p>
+  </div>
+  <div class="dlg" data-ui>
+    <h3>Your full detail on a mid-size SUV</h3>
+    <p>What you charge, and how long it takes start to finish.</p>
+    <div class="two">
+      <div><label for="d-price">You charge ($)</label><input id="d-price" type="number" inputmode="decimal" min="20" value="180"></div>
+      <div><label for="d-hours">Hours</label><input id="d-hours" type="number" inputmode="decimal" min="0.5" step="0.5" value="5"></div>
+    </div>
+    <div class="out" aria-live="polite"><b id="d-rate">$36/hr</b><span id="d-say">That's what that SUV pays you. Most solid detailers do it in 4–5 hours.</span></div>
+    <a class="btn" href="https://app.detailerlogic.com">Fix my prices — start free</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="top">
+    <a class="wordmark" href="#top">Detailer<span>Logic</span> Pro</a>
+    <p>Built by Impact Detailing in Bensalem, PA. Detailing since 1995. Every email is answered by the detailer who built it.</p>
+    <a class="tlink" href="#top">Back to top</a>
+  </div>
+  <a class="mail" href="mailto:support@detailerlogic.com">support@<br>detailerlogic.com</a>
+  <div class="meta">
+    <span><a href="https://app.detailerlogic.com">Log in</a> · <a href="/privacy-policy.html">Privacy</a> · <a href="/terms-of-service.html">Terms</a></span>
+    <span>All screens are the real app with sample data.</span>
+    <span>© 2026 DetailerLogic Pro · Bensalem, PA</span>
+  </div>
 </footer>
 
 <script>
-  (function () {
-    const canvas = document.getElementById('hero-canvas');
-    const ctx = canvas.getContext('2d');
-    let W, H, rings = [], dots = [];
-
-    function resize() {
-      W = canvas.width  = canvas.offsetWidth;
-      H = canvas.height = canvas.offsetHeight;
-    }
-
-    function init() {
-      resize(); rings = []; dots = [];
-      for (let i = 0; i < 60; i++) {
-        dots.push({
-          x: Math.random() * W, y: Math.random() * H,
-          r: Math.random() * 1.5 + 0.5, a: Math.random() * 0.5 + 0.1
-        });
-      }
-    }
-
-    const ox = () => W * 0.5;
-    const oy = () => H * 0.48;
-    let lastRing = 0;
-
-    function spawnRing(now) {
-      if (now - lastRing > 1600) { rings.push({ r: 4, alpha: 0.7 }); lastRing = now; }
-    }
-
-    function draw(ts) {
-      ctx.clearRect(0, 0, W, H);
-      ctx.strokeStyle = 'rgba(33,150,243,0.07)';
-      ctx.lineWidth = 1;
-      const step = 60;
-      for (let x = 0; x < W + step; x += step) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
-      for (let y = 0; y < H + step; y += step) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
-      dots.forEach(d => { ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2); ctx.fillStyle = `rgba(33,150,243,${d.a})`; ctx.fill(); });
-      ctx.beginPath(); ctx.arc(ox(), oy(), 4, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(45,212,191,0.9)'; ctx.shadowColor = '#2DD4BF'; ctx.shadowBlur = 12; ctx.fill(); ctx.shadowBlur = 0;
-      spawnRing(ts);
-      rings = rings.filter(ring => ring.alpha > 0.01);
-      rings.forEach(ring => {
-        ctx.beginPath(); ctx.arc(ox(), oy(), ring.r, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(45,212,191,${ring.alpha})`; ctx.lineWidth = 1.5; ctx.stroke();
-        ring.r += 2.2; ring.alpha *= 0.97;
-      });
-      requestAnimationFrame(draw);
-    }
-
-    window.addEventListener('resize', init);
-    init();
-    requestAnimationFrame(draw);
-  })();
-</script>
-
-<script>
-// Shop waitlist: no login — saves to the DetailerLogic app (shop_leads table).
-var SW_API = /(^|\.)detailerlogic\.com$/.test(location.hostname)
-  ? 'https://app.detailerlogic.com/api/shop-interest'
-  : 'https://detail-logic-staging.vercel.app/api/shop-interest';   // preview deploys test against staging
-var swOpenedAt = 0;
-function openShopWaitlist() {
-  document.getElementById('sw-open').style.display = 'none';
-  document.getElementById('sw-form').style.display = 'block';
-  swOpenedAt = Date.now();
-  setTimeout(function () { document.getElementById('sw-email').focus(); }, 50);
-}
-async function submitShopWaitlist(e) {
-  e.preventDefault();
-  var err = document.getElementById('sw-err'), btn = document.getElementById('sw-submit');
-  err.style.display = 'none';
-  btn.disabled = true; btn.textContent = 'Saving…';
-  try {
-    var r = await fetch(SW_API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
-      email: document.getElementById('sw-email').value,
-      biz: document.getElementById('sw-biz').value,
-      techs: document.getElementById('sw-techs').value,
-      website: document.getElementById('sw-website').value,
-      t: Date.now() - swOpenedAt
-    }) });
-    var j = {}; try { j = await r.json(); } catch (x) {}
-    if (!r.ok || !j.ok) throw new Error(j.error || 'Could not save right now. Email support@detailerlogic.com and we’ll add you.');
-    document.getElementById('sw-form').style.display = 'none';
-    document.getElementById('sw-done').style.display = 'block';
-  } catch (x) {
-    err.textContent = x.message || 'Could not save right now. Email support@detailerlogic.com and we’ll add you.';
-    err.style.display = 'block';
-    btn.disabled = false; btn.textContent = 'Add me to the waitlist';
+(function(){
+  // driveway calculator — same math as the app: hours × rate × size × condition, add-ons not multiplied
+  var RATE=75, SIZE=1.2, m={out:1,in:1.25};
+  var $=function(id){return document.getElementById(id)};
+  var money=function(n){return '$'+n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,',')};
+  function calc(){
+    var inside=2.5*RATE*SIZE*m.in, outside=2*RATE*SIZE*m.out, pet=$('pet').checked?1*RATE*SIZE:0;
+    var total=inside+outside+pet, worst=Math.max(m.in,m.out);
+    var flat=(2.5*RATE*SIZE+2*RATE*SIZE)*worst+pet;
+    $('r-in').textContent=money(inside); $('r-out').textContent=money(outside);
+    $('r-pet-row').style.display=pet?'':'none'; $('r-pet').textContent=money(pet);
+    $('r-total').textContent='$'+Math.round(total).toLocaleString();
+    var diff=Math.round(flat-total);
+    $('r-vs').innerHTML = diff>0
+      ? 'Charge the worst condition on everything and it\'s <b>$'+Math.round(flat).toLocaleString()+'</b>. That\'s the $'+diff+' that loses the job.'
+      : 'Same condition inside and out, so one number is fair. The split pays off when they don\'t match.';
   }
-  return false;
-}
+  document.querySelectorAll('.seg').forEach(function(g){
+    g.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      m[g.dataset.side]=parseFloat(b.dataset.m); calc();
+    });
+  });
+  $('pet').addEventListener('change',calc); calc();
+
+  // board rows
+  document.querySelectorAll('.row').forEach(function(r){
+    r.addEventListener('click',function(){
+      document.querySelectorAll('.row').forEach(function(x){x.setAttribute('aria-expanded',x===r?'true':'false')});
+    });
+  });
+
+  // hourly check
+  function hr(){
+    var p=parseFloat($('d-price').value), h=parseFloat($('d-hours').value);
+    if(!(p>0)||!(h>0)){$('d-rate').textContent='—';$('d-say').textContent='Put in your price and hours.';return;}
+    var r=p/h; $('d-rate').textContent='$'+Math.round(r)+'/hr';
+    $('d-say').textContent = r<60 ? 'That\'s what that SUV pays you. Most solid detailers do it in 4–5 hours, and most charge more than this.'
+      : 'That\'s a solid number. The app keeps it that way on every size and condition.';
+  }
+  $('d-price').addEventListener('input',hr); $('d-hours').addEventListener('input',hr); hr();
+
+  // shop waitlist (saves to the app's shop_leads)
+  var SW_API=/(^|\.)detailerlogic\.com$/.test(location.hostname)?'https://app.detailerlogic.com/api/shop-interest':'https://detail-logic-staging.vercel.app/api/shop-interest';
+  var opened=0;
+  $('sw-open').addEventListener('click',function(){this.style.display='none';$('sw-form').style.display='grid';opened=Date.now();$('sw-email').focus();});
+  $('sw-form').addEventListener('submit',async function(e){
+    e.preventDefault(); var btn=$('sw-submit'), msg=$('sw-msg'); btn.disabled=true; btn.textContent='Saving…';
+    try{
+      var r=await fetch(SW_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:$('sw-email').value,biz:$('sw-biz').value,techs:$('sw-techs').value,website:$('sw-website').value,t:Date.now()-opened})});
+      var j={}; try{j=await r.json()}catch(x){}
+      if(!r.ok||!j.ok) throw new Error(j.error||'Could not save right now. Email support@detailerlogic.com and we\'ll add you.');
+      msg.textContent='You\'re on the list. We\'ll reach out before Shop launches, with founding pricing locked in.'; msg.style.display='block';
+      Array.prototype.forEach.call(this.querySelectorAll('div,button'),function(x){x.style.display='none'});
+    }catch(x){msg.textContent=x.message;msg.style.display='block';btn.disabled=false;btn.textContent='Add me';}
+  });
+
+  // reveals
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -5% 0px',threshold:0});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
+  } else document.querySelectorAll('[data-reveal]').forEach(function(el){el.classList.add('is-in')});
+})();
 </script>
 </body>
 </html>
