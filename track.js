@@ -4,12 +4,14 @@
 // GOOGLE_TAG_ID: Google Ads → Tools → Google tag (looks like AW-123456789) or a GA4 ID (G-XXXX).
 // GOOGLE_SIGNUP_LABEL: Google Ads conversion label for "Sign-up" (the part after the slash).
 (function () {
-    var META_PIXEL_ID = '';
+    var META_PIXEL_ID = '1256233184233936';
     var GOOGLE_TAG_ID = '';
     var GOOGLE_SIGNUP_LABEL = '';
 
-    var meta = /^\d{6,20}$/.test(META_PIXEL_ID);
-    var goog = /^(AW|G)-[A-Z0-9]+$/.test(GOOGLE_TAG_ID);
+    // Only on the real sites, so staging/test traffic never pollutes the ad data.
+    var live = /(^|\.)detailerlogic\.com$/.test(location.hostname);
+    var meta = live && /^\d{6,20}$/.test(META_PIXEL_ID);
+    var goog = live && /^(AW|G)-[A-Z0-9]+$/.test(GOOGLE_TAG_ID);
 
     if (meta) {
         !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
