@@ -4,7 +4,7 @@
 // GOOGLE_TAG_ID: Google Ads → Tools → Google tag (looks like AW-123456789) or a GA4 ID (G-XXXX).
 // GOOGLE_SIGNUP_LABEL: Google Ads conversion label for "Sign-up" (the part after the slash).
 (function () {
-    var META_PIXEL_ID = '1256233184233936';
+    var META_PIXEL_ID = '1128636136698118';
     var GOOGLE_TAG_ID = '';
     var GOOGLE_SIGNUP_LABEL = '';
 
