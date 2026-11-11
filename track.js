@@ -38,6 +38,25 @@
               if (goog && window.gtag) window.gtag('event', 'start_free_click'); } catch (x) {}
     });
 
+    // Website only: an invite link pointed at the website (?ref=code) still works —
+    // the code is kept and added to every 'Start free' link into the app, which
+    // shows the invite and credits the person who shared it.
+    if (!/^app\./.test(location.hostname)) {
+        var ref = null;
+        try {
+            var m = /[?&]ref=([a-z0-9]{6,12})(?:&|$)/i.exec(location.search);
+            if (m) localStorage.setItem('dl_ref', m[1].toLowerCase());
+            ref = localStorage.getItem('dl_ref');
+        } catch (x) {}
+        if (ref && /^[a-z0-9]{6,12}$/.test(ref)) {
+            document.addEventListener('click', function (e) {
+                var a = e.target.closest && e.target.closest('a[href^="https://app.detailerlogic.com"]');
+                if (!a || /log in/i.test(a.textContent) || /[?&]ref=/.test(a.href)) return;
+                try { var u = new URL(a.href); u.searchParams.set('ref', ref); a.href = u.toString(); } catch (x) {}
+            }, true);
+        }
+    }
+
     // dlTrack('signup') — called once after a successful sign-up. Never throws.
     window.dlTrack = function (kind) {
         try {
