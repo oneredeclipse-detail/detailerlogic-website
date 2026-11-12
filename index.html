@@ -253,8 +253,47 @@ a{color:inherit}
 @keyframes drop{from{opacity:0;transform:translateY(40px) rotate(8deg)}to{opacity:1;transform:rotate(3.5deg)}}
 @keyframes drift{from{transform:scale(1)}to{transform:scale(1.035)}}
 
+/* hero: setup promise under the CTA */
+.hero .go{display:flex;flex-direction:column;gap:12px;max-width:340px}
+.hero .go .move{font-size:var(--step-small);line-height:1.45;color:var(--muted)}
+.hero .go .move b{color:var(--ink);font-weight:600}
+
+/* founder */
+.founder{padding:var(--gap) var(--m);background:var(--surface)}
+.founder-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:var(--m);align-items:center;max-width:1200px;margin:0 auto}
+.founder .face{width:100%;max-width:420px;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--surface-2)}
+.founder .eyebrow{font-size:var(--step-small);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.founder h2{font-size:clamp(2.6rem,5vw,5rem);margin-bottom:12px}
+.founder .cred{font-weight:600;color:var(--muted);margin-bottom:28px}
+.founder p.body{font-size:var(--step-lead);line-height:1.45;max-width:44ch;margin-bottom:18px}
+.founder .sig{font-size:var(--step-small);color:var(--muted)}
+.founder .sig a{color:var(--ink)}
+
+/* claim-a-spot form */
+.claim{width:min(520px,calc(100% - 24px));max-height:calc(100svh - 24px);overflow:auto;margin:auto;padding:0;border:0;background:var(--paper);color:var(--on-paper)}
+.claim::backdrop{background:rgba(7,8,15,.78)}
+.claim .in{padding:32px 28px 28px;position:relative}
+.claim h3{font-size:clamp(2.2rem,8vw,3rem);margin:0 40px 8px 0}
+.claim .lede{margin-bottom:22px;color:#3b4252}
+.claim .x{position:absolute;top:12px;right:12px;width:48px;height:48px;border:0;background:transparent;font-size:28px;line-height:1;cursor:pointer;color:var(--on-paper)}
+.claim form{display:grid;gap:16px}
+.claim label{display:block;font-size:var(--step-small);font-weight:600;margin-bottom:6px}
+.claim label small{font-weight:400;color:#5a6274}
+.claim input,.claim select{width:100%;min-height:52px;padding:0 14px;font:inherit;font-size:16px;border:2px solid #9aa3b2;background:#fff;color:var(--on-paper);border-radius:0}
+.claim input:focus,.claim select:focus{border-color:var(--accent);outline:none}
+.claim .btn{width:100%;margin-top:4px}
+.claim .fine{font-size:var(--step-small);color:#5a6274}
+.claim .err{display:none;font-weight:600;color:#B3261E}
+.claim .done{display:none}
+.claim.is-done form,.claim.is-done .lede{display:none}
+.claim.is-done .done{display:block}
+.claim .done p{font-size:var(--step-lead);line-height:1.45;margin-bottom:22px}
+
 /* phone */
 @media (max-width:900px){
+  .hero .go{max-width:none;width:100%}
+  .founder-grid{grid-template-columns:minmax(0,1fr)}
+  .founder .face{max-width:300px}
   .nav ul li:not(.keep){display:none}
   .hero{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto;padding-top:96px;row-gap:28px}
   .hero h1{font-size:clamp(3rem,16.5vw,7rem)}
@@ -321,7 +360,10 @@ a{color:inherit}
       <p>DetailerLogic Pro is the quoting app built by a detailer with 31 years in the trade. Price every car and boat right, in the driveway.</p>
       <div class="facts"><span><b>14 days free</b>, no card</span><span><b>Car + boat</b> in one app</span><span>Built in <b>Bensalem, PA</b></span></div>
     </div>
-    <a class="btn" href="https://app.detailerlogic.com">Start free — 14 days</a>
+    <div class="go">
+      <a class="btn" href="https://app.detailerlogic.com">Start free — 14 days</a>
+      <p class="move"><b>No weekend of setup.</b> Send us your price sheet and past-client list. We load everything for you.</p>
+    </div>
   </div>
   <figure class="photo">
     <img src="img/driveway.jpg" width="1200" height="1487" alt="A detailer holding a phone in a driveway, showing a DetailerLogic quote of $551.25 in front of a black pickup truck">
@@ -448,6 +490,21 @@ a{color:inherit}
   </div>
 </section>
 
+<section class="founder" aria-labelledby="founder-h">
+  <div class="founder-grid">
+    <!-- PHOTO: drop Shaun's photo at img/shaun.jpg (portrait, 4:5, at least 800×1000) and change src below. -->
+    <img class="face" src="img/shaun-placeholder.svg" width="800" height="1000" loading="lazy" alt="Shaun La Bate, owner of Impact Detailing and builder of DetailerLogic Pro">
+    <div>
+      <p class="eyebrow" data-reveal>Who built this</p>
+      <h2 class="disp" id="founder-h" data-reveal style="--d:1">Built by Shaun La Bate.</h2>
+      <p class="cred" data-reveal style="--d:2">31 years detailing · Owner of Impact Detailing, Bensalem, PA</p>
+      <p class="body" data-reveal style="--d:3">Shaun has been detailing cars since 1995 and still runs Impact Detailing, a mobile detailing business. He built DetailerLogic Pro because the tools he used priced a trashed interior the same as a clean one, and none of them told him which clients were due back.</p>
+      <p class="body" data-reveal style="--d:3">So the app prices the inside and outside of every car on its own, and keeps the list of clients who are due for a detail, with the text ready to send.</p>
+      <p class="sig" data-reveal style="--d:4">Questions go straight to Shaun: <a href="mailto:support@detailerlogic.com">support@detailerlogic.com</a></p>
+    </div>
+  </div>
+</section>
+
 <section class="pricing" id="founding" aria-labelledby="price-h">
   <div class="price-head">
     <h2 class="disp" id="price-h" data-reveal>Founding 10.</h2>
@@ -465,15 +522,15 @@ a{color:inherit}
         <li>A 15-minute call: your first quote and first 5 rebooking texts go out together</li>
       </ul>
       <div class="promise">
-        <b>3 paid jobs in 60 days, or every dollar back.</b>
-        Your side: in the first 30 days, send us your prices, add 10 past clients and send the rebooking texts.
+        <b>$1,000 in booked jobs in 60 days, or every penny back.</b>
+        Your side, in the first 30 days: send us your prices and a list of at least 25 past clients, and send the rebooking texts the app lines up. We count jobs booked in the app from your past clients and your booking page.
       </div>
     </div>
     <div class="perf" aria-hidden="true"></div>
     <div class="stub">
       <span class="disp price">$59</span>
       <span class="alt">a month, or $497 a year</span>
-      <a class="btn dark" href="mailto:support@detailerlogic.com?subject=Founding%20spot&amp;body=I%20want%20a%20Founding%20spot.%0A%0ABusiness%20name%3A%20%0APhone%3A%20%0A">Claim a spot</a>
+      <button class="btn dark" type="button" data-claim>Claim a spot</button>
     </div>
   </div>
   <p class="ticket-note">Ten spots. Every setup is done by hand, so when they're gone, they're gone.</p>
@@ -515,12 +572,13 @@ a{color:inherit}
     <h2 class="disp" id="faq-h">Straight answers.</h2>
     <div>
       <details name="faq" open><summary>Do I need a card for the trial?<span class="pm" aria-hidden="true"></span></summary><p class="ans">No. You get 14 days of everything in Pro without a card. Pick a plan when you're ready, or don't.</p></details>
-      <details name="faq"><summary>I already have prices. Do I start over?<span class="pm" aria-hidden="true"></span></summary><p class="ans">No. Send a photo of your price list, a link to your site or Facebook, or just your 3 most common jobs. We load them within 24 hours, exactly as you charge now.</p></details>
+      <details name="faq"><summary>I already have prices. Do I start over?<span class="pm" aria-hidden="true"></span></summary><p class="ans">No. Send a photo of your price list, a link to your site or Facebook, or just your 3 most common jobs. We load them within 24 hours, exactly as you charge now. Send your past-client list too (a screenshot or a Square export) and we load that for you as well.</p></details>
+      <details name="faq"><summary>Why not just use Square?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Square is built to take payments for any kind of business. It doesn't price the inside and outside of a car on their own by condition and vehicle size, and it doesn't keep a list of which clients are due back for their next detail. DetailerLogic does both, and takes cards too.<br><br>The cost, straight: Square's free plan is $0 a month. Pro is $59 a month, plus our 0.5% on card payments. On $6,000 a month in cards that's $30, so $89 a month all in. The card processing fee applies either way (Stripe's here, Square's there). One rebooked full detail pays for the month. Weekend is $29.95 a month plus 1%.</p></details>
       <details name="faq"><summary>iPhone or Android?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Both. It runs in your phone's browser. Add it to your home screen and it opens like any other app.</p></details>
       <details name="faq"><summary>How do card payments work?<span class="pm" aria-hidden="true"></span></summary><p class="ans">You connect your own Stripe account and the money goes straight to you. Stripe takes its standard processing fee, plus our fee of 1% on Weekend or 0.5% on Pro.</p></details>
       <details name="faq"><summary>Where does the suggested hourly rate come from?<span class="pm" aria-hidden="true"></span></summary><p class="ans">From the income level of your ZIP code and how long you've been detailing. It's a starting point. You set your own rate and can change it any time.</p></details>
       <details name="faq"><summary>What happens when it rains?<span class="pm" aria-hidden="true"></span></summary><p class="ans">The app checks the 7-day forecast against your booked mobile jobs and flags any day at 40% rain or more. One tap writes the reschedule text, and your phone can warn you the night before.</p></details>
-      <details name="faq"><summary>Can I cancel?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Any time, no contract. The Founding guarantee stands on top of that: 3 paid jobs in 60 days or every dollar back, if you did your part.</p></details>
+      <details name="faq"><summary>Can I cancel?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Any time, no contract. The Founding guarantee stands on top of that: $1,000 in booked jobs in 60 days or every penny back, if you did your part.</p></details>
       <details name="faq"><summary>What do you do with my data?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Your clients and jobs are yours, visible only to your account. Google Calendar sync only touches the events the app creates. <a href="/privacy-policy.html">Privacy policy</a> · <a href="/privacy-policy.html#google">How we handle Google data</a></p></details>
     </div>
   </div>
@@ -544,6 +602,29 @@ a{color:inherit}
 </section>
 
 </main>
+
+<dialog class="claim" id="claim" aria-labelledby="claim-h">
+  <div class="in">
+    <button class="x" type="button" data-close aria-label="Close">×</button>
+    <h3 class="disp" id="claim-h">Claim a Founding spot.</h3>
+    <p class="lede">We'll call or text you within 24 hours to set it up. No payment now.</p>
+    <form id="claim-form" novalidate>
+      <div><label for="cl-name">Your name</label><input id="cl-name" name="name" type="text" autocomplete="name" required maxlength="80"></div>
+      <div><label for="cl-biz">Business name <small>(optional)</small></label><input id="cl-biz" name="biz" type="text" autocomplete="organization" maxlength="80"></div>
+      <div><label for="cl-phone">Phone number</label><input id="cl-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="30" placeholder="(555) 555-0123"></div>
+      <div><label for="cl-past">About how many past clients? <small>(optional)</small></label>
+        <select id="cl-past" name="past"><option value="">Pick one</option><option value="under_25">Under 25</option><option value="25_100">25–100</option><option value="100_300">100–300</option><option value="300_plus">300+</option></select></div>
+      <input id="cl-website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+      <p class="err" id="cl-err" role="alert"></p>
+      <button class="btn" type="submit" id="cl-submit">Claim my spot</button>
+      <p class="fine">$59 a month or $497 a year once your setup is done. Your info is only used to call you back.</p>
+    </form>
+    <div class="done" role="status">
+      <p id="cl-done-msg">Got it. We'll call or text you within 24 hours to set up your spot.</p>
+      <button class="btn" type="button" data-close>Back to the page</button>
+    </div>
+  </div>
+</dialog>
 
 <footer class="foot">
   <div class="top">
@@ -622,6 +703,39 @@ a{color:inherit}
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -5% 0px',threshold:0});
     document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el)});
   } else document.querySelectorAll('[data-reveal]').forEach(function(el){el.classList.add('is-in')});
+})();
+</script>
+<script>
+// Founding 10 "Claim a spot" form → app /api/founding (founding_leads). Self-contained.
+(function(){
+  var dlg=document.getElementById('claim'); if(!dlg) return;
+  var API=/(^|\.)detailerlogic\.com$/.test(location.hostname)?'https://app.detailerlogic.com/api/founding':'https://detail-logic-staging.vercel.app/api/founding';
+  var f=document.getElementById('claim-form'), err=document.getElementById('cl-err'), btn=document.getElementById('cl-submit'), opened=0;
+  function open(){ if(dlg.open) return; opened=Date.now(); err.style.display='none';
+    if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+    setTimeout(function(){ if(!dlg.classList.contains('is-done')) document.getElementById('cl-name').focus(); },50); }
+  function close(){ if(dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
+  document.querySelectorAll('[data-claim]').forEach(function(b){ b.addEventListener('click',open); });
+  dlg.querySelectorAll('[data-close]').forEach(function(b){ b.addEventListener('click',close); });
+  dlg.addEventListener('click',function(e){ if(e.target===dlg) close(); });
+  if(/^#claim$/.test(location.hash)) open();
+  window.addEventListener('hashchange',function(){ if(location.hash==='#claim') open(); });
+  function fail(m){ err.textContent=m; err.style.display='block'; btn.disabled=false; btn.textContent='Claim my spot'; }
+  f.addEventListener('submit',async function(e){
+    e.preventDefault();
+    var name=document.getElementById('cl-name').value.trim(), phone=document.getElementById('cl-phone').value.trim();
+    if(name.length<2) return fail('Enter your name.');
+    var d=phone.replace(/\D/g,''); if(d.length<10||d.length>15) return fail('Enter a phone number we can call or text.');
+    err.style.display='none'; btn.disabled=true; btn.textContent='Sending…';
+    try{
+      var r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,biz:document.getElementById('cl-biz').value,phone:phone,past:document.getElementById('cl-past').value,website:document.getElementById('cl-website').value,page:location.pathname,t:Date.now()-opened})});
+      var j={}; try{j=await r.json()}catch(x){}
+      if(!r.ok||!j.ok) throw new Error(j.error||'Could not save right now. Email support@detailerlogic.com and we\'ll hold your spot.');
+      document.getElementById('cl-done-msg').textContent='Got it, '+name.split(' ')[0]+'. We\'ll call or text you at '+phone+' within 24 hours to set up your spot.';
+      dlg.classList.add('is-done');
+      try{ if(window.fbq) window.fbq('track','Lead'); }catch(x){}
+    }catch(x){ fail(x.message); }
+  });
 })();
 </script>
 </body>
