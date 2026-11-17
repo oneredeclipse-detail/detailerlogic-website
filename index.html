@@ -534,7 +534,7 @@ a{color:inherit}
       <span class="disp price">$59</span>
       <span class="alt">a month, or $497 a year</span>
       <a class="btn dark" href="https://app.detailerlogic.com">Start your 14-day trial</a>
-      <button type="button" data-claim style="background:none;border:0;color:inherit;font:inherit;font-weight:600;text-decoration:underline;cursor:pointer;min-height:44px;padding:0 8px">Or have us set it up for you</button>
+      <a href="#shop" style="color:inherit;font-weight:600;text-decoration:underline;display:inline-flex;align-items:center;min-height:44px;padding:0 8px">Or join the Shop waitlist</a>
     </div>
   </div>
   <p class="ticket-note">Ten spots. Every setup is done by hand, so when they're gone, they're gone.</p>
@@ -553,7 +553,7 @@ a{color:inherit}
       <span class="pd">Full-time. Everything in Core plus rebooking reminders, review texts, boats, earnings export, your brand only. No card fee.</span>
       <a class="btn" href="https://app.detailerlogic.com">Start free</a>
     </div>
-    <div class="plan">
+    <div class="plan" id="shop">
       <span class="pn">Shop</span>
       <span class="pp">$99<small>coming soon</small></span>
       <span class="pd">2+ technicians. Tech logins, job assignment, QC sign-off with a photo report.</span>
@@ -691,6 +691,9 @@ a{color:inherit}
   var SW_API=/(^|\.)detailerlogic\.com$/.test(location.hostname)?'https://app.detailerlogic.com/api/shop-interest':'https://detail-logic-staging.vercel.app/api/shop-interest';
   var opened=0;
   $('sw-open').addEventListener('click',function(){this.style.display='none';$('sw-form').style.display='grid';opened=Date.now();$('sw-email').focus();});
+  function openShop(){var el=$('shop'); if(!el) return; el.scrollIntoView({behavior:'smooth',block:'center'}); var b=$('sw-open'); if(b&&b.style.display!=='none') b.click();}
+  if(location.hash==='#shop') setTimeout(openShop,150);
+  window.addEventListener('hashchange',function(){ if(location.hash==='#shop') openShop(); });
   $('sw-form').addEventListener('submit',async function(e){
     e.preventDefault(); var btn=$('sw-submit'), msg=$('sw-msg'); btn.disabled=true; btn.textContent='Saving…';
     try{
