@@ -519,7 +519,7 @@ a{color:inherit}
         <li>We load your prices within 24 hours</li>
         <li>We load your past clients from a screenshot or Square list</li>
         <li>We build your booking page from 3 photos</li>
-        <li>A 15-minute call: your first quote and first 5 rebooking texts go out together</li>
+        <li>A text setup: your first quote and first 5 rebooking texts go out together</li>
       </ul>
       <div class="promise">
         <b>$1,000 in booked jobs in 60 days, or every penny back.</b>
@@ -607,7 +607,7 @@ a{color:inherit}
   <div class="in">
     <button class="x" type="button" data-close aria-label="Close">×</button>
     <h3 class="disp" id="claim-h">Claim a Founding spot.</h3>
-    <p class="lede">We'll call or text you within 24 hours to set it up. No payment now.</p>
+    <p class="lede">We'll text you within 24 hours to set it up. No payment now.</p>
     <form id="claim-form" novalidate>
       <div><label for="cl-name">Your name</label><input id="cl-name" name="name" type="text" autocomplete="name" required maxlength="80"></div>
       <div><label for="cl-biz">Business name <small>(optional)</small></label><input id="cl-biz" name="biz" type="text" autocomplete="organization" maxlength="80"></div>
@@ -617,10 +617,10 @@ a{color:inherit}
       <input id="cl-website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
       <p class="err" id="cl-err" role="alert"></p>
       <button class="btn" type="submit" id="cl-submit">Claim my spot</button>
-      <p class="fine">$59 a month or $497 a year once your setup is done. Your info is only used to call you back.</p>
+      <p class="fine">$59 a month or $497 a year once your setup is done. Your info is only used to text you back.</p>
     </form>
     <div class="done" role="status">
-      <p id="cl-done-msg">Got it. We'll call or text you within 24 hours to set up your spot.</p>
+      <p id="cl-done-msg">Got it. We'll text you within 24 hours to set up your spot.</p>
       <button class="btn" type="button" data-close>Back to the page</button>
     </div>
   </div>
@@ -725,13 +725,13 @@ a{color:inherit}
     e.preventDefault();
     var name=document.getElementById('cl-name').value.trim(), phone=document.getElementById('cl-phone').value.trim();
     if(name.length<2) return fail('Enter your name.');
-    var d=phone.replace(/\D/g,''); if(d.length<10||d.length>15) return fail('Enter a phone number we can call or text.');
+    var d=phone.replace(/\D/g,''); if(d.length<10||d.length>15) return fail('Enter a mobile number we can text.');
     err.style.display='none'; btn.disabled=true; btn.textContent='Sending…';
     try{
       var r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,biz:document.getElementById('cl-biz').value,phone:phone,past:document.getElementById('cl-past').value,website:document.getElementById('cl-website').value,page:location.pathname,t:Date.now()-opened})});
       var j={}; try{j=await r.json()}catch(x){}
       if(!r.ok||!j.ok) throw new Error(j.error||'Could not save right now. Email support@detailerlogic.com and we\'ll hold your spot.');
-      document.getElementById('cl-done-msg').textContent='Got it, '+name.split(' ')[0]+'. We\'ll call or text you at '+phone+' within 24 hours to set up your spot.';
+      document.getElementById('cl-done-msg').textContent='Got it, '+name.split(' ')[0]+'. We\'ll text you at '+phone+' within 24 hours to set up your spot.';
       dlg.classList.add('is-done');
       try{ if(window.fbq) window.fbq('track','Lead'); }catch(x){}
     }catch(x){ fail(x.message); }
