@@ -193,6 +193,7 @@ a{color:inherit}
 .plans h3{font-size:clamp(2.4rem,4vw,4rem);margin-bottom:28px}
 .plan{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.3fr) minmax(0,4fr) auto;gap:24px;align-items:center;padding:28px 0;border-bottom:4px solid #d5dae3}
 .plan .pn{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2rem,3vw,2.8rem);line-height:.9}
+.plan .tag{display:block;width:fit-content;margin-top:10px;font:600 .75rem/1 var(--text);letter-spacing:.08em;text-transform:uppercase;background:var(--accent);color:var(--on-accent);padding:6px 8px}
 .plan .pp{font-size:var(--step-lead);font-weight:600;font-variant-numeric:tabular-nums}
 .plan .pp small{display:block;font-size:var(--step-small);font-weight:400;color:#3b4252}
 .plan .btn{background:var(--on-paper);color:var(--paper)}
@@ -360,7 +361,7 @@ a{color:inherit}
   </h1>
   <div class="bottom">
     <div>
-      <p>The quoting and booking app for auto detailers. Price every car and boat by condition, from the driveway. Built by a detailer with 31 years in the trade.</p>
+      <p>The quoting and booking app for auto detailers. Price every car and boat by condition, from the driveway. Built by a detailer with 31 years in the trade. Boats priced by the foot with oxidation factored in. Send your price sheet and I'll load it by hand within 24 hours.</p>
       <div class="facts"><span><b>14 days free</b>, no card</span><span><b>Car + boat</b> in one app</span><span>Built in <b>Bensalem, PA</b></span></div>
     </div>
     <div class="go">
@@ -423,7 +424,7 @@ a{color:inherit}
     <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:0"><span class="nm">Mike Santos</span><span class="f">2021 Honda Pilot</span><span class="f">Sat</span><span class="amt">$350</span><span class="st req">Request</span><span class="detail">Booked himself from your booking page, saw the price first. Accept and he's on your calendar.</span></button>
     <button class="row" role="listitem" aria-expanded="true" data-reveal style="--d:1"><span class="nm">Jess Kowalski</span><span class="f">2022 Toyota RAV4</span><span class="f">Wed 9:00</span><span class="amt">$260</span><span class="st rain">Rain 70%</span><span class="detail">70% chance of rain Wednesday on a mobile job. One tap writes the reschedule text, you hit send, and nobody eats a rain day.</span></button>
     <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:2"><span class="nm">Tom Reyes</span><span class="f">2023 Chevy Tahoe</span><span class="f">Fri 1:30</span><span class="amt">$425</span><span class="st ok">Booked</span><span class="detail">On your Google Calendar with the address. Tap Directions when it's time to roll.</span></button>
-    <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:3"><span class="nm">Ana Lopez</span><span class="f">2019 Honda Civic</span><span class="f">Done</span><span class="amt">$180</span><span class="st unpaid">Unpaid</span><span class="detail">Job's done, money isn't. Get Paid texts her a card link with a tip option.</span></button>
+    <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:3"><span class="nm">Ana Lopez</span><span class="f">2019 Honda Civic</span><span class="f">Done</span><span class="amt">$180</span><span class="st unpaid">Unpaid</span><span class="detail">Job's done, money isn't. Get Paid opens a text to her with a card link and tip option.</span></button>
     <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:4"><span class="nm">Dana Price</span><span class="f">2021 Tesla Model Y</span><span class="f">Card</span><span class="amt">$270</span><span class="st paid">Paid</span><span class="detail">$240 job plus a $30 tip, paid by card. Your phone buzzed the second it landed.</span></button>
     <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:5"><span class="nm">Lisa Park</span><span class="f">Full detail</span><span class="f">11 mo ago</span><span class="amt">$260</span><span class="st due">Due</span><span class="detail">Hasn't been back in 11 months. One tap opens a text from your own number with her name already in it.</span></button>
     <button class="row" role="listitem" aria-expanded="false" data-reveal style="--d:6"><span class="nm">Rob Diaz</span><span class="f">2018 Ford F-150</span><span class="f">6 mo ago</span><span class="amt">$310</span><span class="st due">Due</span><span class="detail">Six months since his full detail. The app remembers so you don't have to.</span></button>
@@ -448,7 +449,7 @@ a{color:inherit}
     <img class="phone" data-reveal src="img/home.jpg" width="720" height="1560" loading="lazy" alt="The DetailerLogic home screen showing $1,630 of money waiting: a quote request, clients due and an unpaid job">
   </div>
   <div class="verb dark">
-    <div><p class="disp word">Rebook</p><p class="say">Clients due for a detail show up on their own. One tap texts them from your phone.</p></div>
+    <div><p class="disp word">Rebook</p><p class="say">Clients due for a detail show up on their own. One tap opens a ready-to-send text in your messages app.</p></div>
     <img class="phone" data-reveal src="img/rebook.jpg" width="720" height="1560" loading="lazy" alt="The Due for a detail list with four past clients and a Text button for each">
   </div>
 </section>
@@ -522,7 +523,7 @@ a{color:inherit}
         <li>We load your prices within 24 hours</li>
         <li>We load your past clients from a screenshot or Square list</li>
         <li>We build your booking page from 3 photos</li>
-        <li>A text setup: your first quote and first 5 rebooking texts go out together</li>
+        <li>A text setup: your first quote and first 5 rebooking texts are ready to send together</li>
       </ul>
       <div class="promise">
         <b>$1,000 in booked jobs in 60 days, or every penny back.</b>
@@ -548,7 +549,7 @@ a{color:inherit}
       <a class="btn" href="https://app.detailerlogic.com">Start free</a>
     </div>
     <div class="plan">
-      <span class="pn">Pro</span>
+      <span class="pn">Pro<small class="tag">Best value</small></span>
       <span class="pp">$59<small>a month, or $497 a year</small></span>
       <span class="pd">Full-time. Everything in Core plus rebooking reminders, review texts, boats, earnings export, your brand only. No card fee.</span>
       <a class="btn" href="https://app.detailerlogic.com">Start free</a>
