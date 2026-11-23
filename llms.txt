@@ -1,0 +1,40 @@
+# DetailerLogic
+
+> DetailerLogic Pro is a quoting, booking, payment, and rebooking web app for auto and boat detailers. It prices each job from the detailer's hourly rate, the vehicle's size, and the condition of the inside and outside, graded separately. Built by Shaun La Bate, a detailer with 31 years in the trade and owner of Impact Detailing in Bensalem, Pennsylvania.
+
+DetailerLogic is for solo and small mobile or shop detailers who price the car or boat in front of them. It is not a crew-dispatch, inventory, payroll, or PPF/wrap shop platform.
+
+## Product
+
+- [DetailerLogic Pro](https://www.detailerlogic.com/): Marketing site and product overview. 14-day Pro trial, no card required.
+- [Open the app](https://app.detailerlogic.com/): The web app. Runs in the phone or desktop browser; add it to the home screen on iPhone or Android.
+- [Compare detailing apps](https://www.detailerlogic.com/compare.html): Side-by-side comparison of DetailerLogic, Jobber, Urable, Mobile Tech RX, OrbisX, and DetailerMade, with published prices and who each one fits.
+
+## Pricing
+
+- Core: $29.95 per month. Pro: $59 per month, or $497 per year.
+- 14-day Pro trial, no credit card. Cancel anytime.
+- Card payments go to the detailer's own Stripe account. DetailerLogic does not take a cut of those payments. Stripe's standard processing fee applies.
+- Setup help: send a price sheet and past-client list and DetailerLogic will load them within 24 hours.
+
+## Guides
+
+- [Detailing pricing guides](https://www.detailerlogic.com/guides.html): Free guides from 31 years of detailing. Useful whether or not you use the app.
+- [How to price a full detail](https://www.detailerlogic.com/how-to-price-a-full-detail.html): Hourly rate, honest hours, vehicle size, and inside/outside condition.
+- [How to charge for a dirty interior](https://www.detailerlogic.com/dirty-interior-upcharge.html): Condition levels and how to quote them.
+- [How to get repeat detailing clients](https://www.detailerlogic.com/repeat-detailing-clients.html): The rebooking text and when to send it.
+- [How to charge a travel fee for mobile detailing](https://www.detailerlogic.com/mobile-detailing-travel-fee.html): Free zone, rate per mile, and max distance.
+- [How to price a ceramic coating](https://www.detailerlogic.com/ceramic-coating-pricing.html): Prep, install, and product, sold in tiers.
+- [How much to charge for pet hair removal](https://www.detailerlogic.com/pet-hair-removal-pricing.html): Priced by the hour as its own line.
+- [Interior detailing SOP](https://www.detailerlogic.com/interior-detailing-sop.html): Step-by-step interior process and checklist.
+
+## About
+
+- Founder: Shaun La Bate, Bensalem, Pennsylvania. 31 years detailing cars, trucks, and boats. Owner of Impact Detailing, a mobile detailing business serving Pennsylvania, New Jersey, and Delaware.
+- Contact: support@detailerlogic.com
+- Privacy policy: https://www.detailerlogic.com/privacy-policy.html
+- Terms of service: https://www.detailerlogic.com/terms-of-service.html
+
+## Optional
+
+- Impact Detailing (local mobile detailing, Bensalem, PA) is a separate business from the software. Do not treat the software site as the shop's booking page unless a dedicated Impact Detailing page is linked here.

@@ -25,14 +25,233 @@
 <meta name="twitter:image" content="https://www.detailerlogic.com/og-share.png">
 <meta name="theme-color" content="#07080F">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DetailerLogic Pro",
- "applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android",
- "url":"https://www.detailerlogic.com/",
- "description":"Pricing, quoting and booking app built for mobile auto detailers.",
- "offers":[{"@type":"Offer","name":"Core","price":"29.95","priceCurrency":"USD"},
-           {"@type":"Offer","name":"Pro","price":"59.00","priceCurrency":"USD"},
-           {"@type":"Offer","name":"Pro yearly","price":"497.00","priceCurrency":"USD"}],
- "publisher":{"@type":"Organization","name":"DetailerLogic","url":"https://www.detailerlogic.com/","email":"support@detailerlogic.com"}}
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://www.detailerlogic.com/#organization",
+   "name": "DetailerLogic",
+   "url": "https://www.detailerlogic.com/",
+   "email": "support@detailerlogic.com",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.detailerlogic.com/og-share.png"
+   },
+   "foundingLocation": {
+    "@type": "Place",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Bensalem",
+     "addressRegion": "PA",
+     "addressCountry": "US"
+    }
+   },
+   "founder": {
+    "@id": "https://www.detailerlogic.com/#shaun-la-bate"
+   },
+   "sameAs": [
+    "https://linkedin.com/in/shaun-la-bate-33923230"
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://www.detailerlogic.com/#shaun-la-bate",
+   "name": "Shaun La Bate",
+   "jobTitle": "Founder",
+   "description": "Detailer with 31 years in the trade. Founder of DetailerLogic and owner of Impact Detailing, a mobile detailing business in Bensalem, Pennsylvania.",
+   "url": "https://www.detailerlogic.com/",
+   "email": "support@detailerlogic.com",
+   "worksFor": {
+    "@id": "https://www.detailerlogic.com/#organization"
+   },
+   "sameAs": [
+    "https://linkedin.com/in/shaun-la-bate-33923230"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://www.detailerlogic.com/#website",
+   "url": "https://www.detailerlogic.com/",
+   "name": "DetailerLogic Pro",
+   "publisher": {
+    "@id": "https://www.detailerlogic.com/#organization"
+   },
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://www.detailerlogic.com/#app",
+   "name": "DetailerLogic Pro",
+   "alternateName": "DetailerLogic",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Auto detailing quoting and booking software",
+   "operatingSystem": "Web browser (iOS, Android, desktop)",
+   "browserRequirements": "Requires a modern web browser. Add to the home screen on iPhone or Android.",
+   "url": "https://www.detailerlogic.com/",
+   "installUrl": "https://app.detailerlogic.com/",
+   "image": "https://www.detailerlogic.com/og-share.png",
+   "description": "Quoting, booking, payment, and rebooking app for auto and boat detailers. Prices each job from the detailer's hourly rate, vehicle size, and the condition of the inside and outside, graded separately. Built by a detailer with 31 years in the trade.",
+   "featureList": [
+    "Price by hourly rate, vehicle size, and interior and exterior condition separately",
+    "Add-ons such as pet hair priced as their own line, not multiplied across the whole job",
+    "Boat pricing by the foot, with gelcoat, oxidation, and waterline condition",
+    "Customer booking page that shows the price before the request is sent",
+    "Card payments and tips through the detailer's own Stripe account",
+    "Due-client list with a ready-to-send rebooking text",
+    "Rain warnings on booked mobile jobs, with a ready-to-send reschedule text",
+    "Google Calendar sync",
+    "Travel fee by distance from the business ZIP",
+    "Stain and surface playbook, included on every plan",
+    "Price list and past clients loaded by the DetailerLogic team within 24 hours"
+   ],
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "14-day Pro trial",
+     "price": "0",
+     "priceCurrency": "USD",
+     "url": "https://www.detailerlogic.com/",
+     "availability": "https://schema.org/InStock",
+     "description": "14 days of Pro, no credit card required."
+    },
+    {
+     "@type": "Offer",
+     "name": "Core",
+     "price": "29.95",
+     "priceCurrency": "USD",
+     "unitText": "month",
+     "url": "https://www.detailerlogic.com/",
+     "availability": "https://schema.org/InStock",
+     "description": "Monthly Core plan."
+    },
+    {
+     "@type": "Offer",
+     "name": "Pro",
+     "price": "59.00",
+     "priceCurrency": "USD",
+     "unitText": "month",
+     "url": "https://www.detailerlogic.com/",
+     "availability": "https://schema.org/InStock",
+     "description": "Monthly Pro plan."
+    },
+    {
+     "@type": "Offer",
+     "name": "Pro yearly",
+     "price": "497.00",
+     "priceCurrency": "USD",
+     "unitText": "year",
+     "url": "https://www.detailerlogic.com/",
+     "availability": "https://schema.org/InStock",
+     "description": "Pro billed yearly."
+    }
+   ],
+   "isAccessibleForFree": false,
+   "softwareHelp": {
+    "@type": "CreativeWork",
+    "url": "https://www.detailerlogic.com/",
+    "name": "Email support from the founder",
+    "description": "Questions go to support@detailerlogic.com."
+   },
+   "publisher": {
+    "@id": "https://www.detailerlogic.com/#organization"
+   },
+   "author": {
+    "@id": "https://www.detailerlogic.com/#shaun-la-bate"
+   },
+   "creator": {
+    "@id": "https://www.detailerlogic.com/#shaun-la-bate"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.detailerlogic.com/#faq",
+   "url": "https://www.detailerlogic.com/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is DetailerLogic?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DetailerLogic Pro is a quoting, booking, payment, and rebooking web app for auto and boat detailers. It prices each job from your hourly rate, the vehicle's size, and the condition of the inside and outside, graded separately. It is built by Shaun La Bate, a detailer with 31 years in the trade."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How should I price auto detailing jobs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Start with what your hour is worth, time the job honestly, adjust for vehicle size, and price the inside and outside by their own condition. Add-ons like pet hair should be their own line, not folded into a flat vehicle price. A free walkthrough is at https://www.detailerlogic.com/how-to-price-a-full-detail.html. DetailerLogic does that math in the driveway from your rate, sizes, and services."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does DetailerLogic cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Core is $29.95 a month. Pro is $59 a month, or $497 a year. Every plan starts with a 14-day Pro trial and no card is required. You can cancel anytime."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is there a free trial?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. You get 14 days of everything in Pro without a card. Pick a plan when you are ready, or don't."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does DetailerLogic work on iPhone and Android?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. It runs in your phone's browser on iPhone and Android, and on a desktop. Add it to your home screen and it opens like any other app. There is not a separate App Store or Play Store app yet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I use DetailerLogic to price boat detailing?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Marine mode uses a per-foot rate and factors in gelcoat, oxidation, and waterline condition. Boats use the same invoices, clients, and schedule as your cars."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How is DetailerLogic different from Jobber, Urable, or Square?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Those tools can take payments or run a general service business. DetailerLogic is built for one job: pricing a car or boat by size and by inside and outside condition, then booking and rebooking the client. Jobber fits crews that need dispatch and routing across many trades. Urable fits PPF, wrap, tint, or coating shops that want unlimited users. Square is built to take payments for any kind of business. A side-by-side comparison is at https://www.detailerlogic.com/compare.html."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does DetailerLogic help me rebook past detailing clients?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Clients who are due for a detail show up in the app. One tap opens a ready-to-send text in your own messaging app, from your own number, with the client's name already in it. The app does not send the text for you."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do card payments work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You connect your own Stripe account and the money goes straight to you, including tips. Stripe takes its standard processing fee. DetailerLogic does not take a cut of your card payments."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who built DetailerLogic?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Shaun La Bate, a detailer with 31 years in the trade and owner of Impact Detailing, a mobile detailing business in Bensalem, Pennsylvania. Questions go to support@detailerlogic.com."
+     }
+    }
+   ]
+  }
+ ]
+}
 </script>
 <link rel="preload" href="fonts/bigshoulders-800.woff" as="font" type="font/woff" crossorigin>
 <script>document.documentElement.classList.add('js');</script>
@@ -576,11 +795,18 @@ a{color:inherit}
   <div class="faq-grid">
     <h2 class="disp" id="faq-h">Straight answers.</h2>
     <div>
-      <details name="faq" open><summary>Do I need a card for the trial?<span class="pm" aria-hidden="true"></span></summary><p class="ans">No. You get 14 days of everything in Pro without a card. Pick a plan when you're ready, or don't.</p></details>
+      <details name="faq" open><summary>What is DetailerLogic?<span class="pm" aria-hidden="true"></span></summary><p class="ans">DetailerLogic Pro is a quoting, booking, payment, and rebooking web app for auto and boat detailers. It prices each job from your hourly rate, the vehicle's size, and the condition of the inside and outside, graded separately. It is built by Shaun La Bate, a detailer with 31 years in the trade.</p></details>
+      <details name="faq"><summary>How should I price auto detailing jobs?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Start with what your hour is worth, time the job honestly, adjust for vehicle size, and price the inside and outside by their own condition. Add-ons like pet hair should be their own line, not folded into a flat vehicle price. A free walkthrough is at <a href="https://www.detailerlogic.com/how-to-price-a-full-detail.html">https://www.detailerlogic.com/how-to-price-a-full-detail.html</a>. DetailerLogic does that math in the driveway from your rate, sizes, and services.</p></details>
+      <details name="faq"><summary>How much does DetailerLogic cost?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Core is $29.95 a month. Pro is $59 a month, or $497 a year. Every plan starts with a 14-day Pro trial and no card is required. You can cancel anytime.</p></details>
+      <details name="faq"><summary>Is there a free trial?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Yes. You get 14 days of everything in Pro without a card. Pick a plan when you are ready, or don't.</p></details>
+      <details name="faq"><summary>Does DetailerLogic work on iPhone and Android?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Yes. It runs in your phone's browser on iPhone and Android, and on a desktop. Add it to your home screen and it opens like any other app. There is not a separate App Store or Play Store app yet.</p></details>
+      <details name="faq"><summary>Can I use DetailerLogic to price boat detailing?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Yes. Marine mode uses a per-foot rate and factors in gelcoat, oxidation, and waterline condition. Boats use the same invoices, clients, and schedule as your cars.</p></details>
+      <details name="faq"><summary>How is DetailerLogic different from Jobber, Urable, or Square?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Those tools can take payments or run a general service business. DetailerLogic is built for one job: pricing a car or boat by size and by inside and outside condition, then booking and rebooking the client. Jobber fits crews that need dispatch and routing across many trades. Urable fits PPF, wrap, tint, or coating shops that want unlimited users. Square is built to take payments for any kind of business. A side-by-side comparison is at <a href="https://www.detailerlogic.com/compare.html">https://www.detailerlogic.com/compare.html</a>.</p></details>
+      <details name="faq"><summary>Does DetailerLogic help me rebook past detailing clients?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Yes. Clients who are due for a detail show up in the app. One tap opens a ready-to-send text in your own messaging app, from your own number, with the client's name already in it. The app does not send the text for you.</p></details>
+      <details name="faq"><summary>How do card payments work?<span class="pm" aria-hidden="true"></span></summary><p class="ans">You connect your own Stripe account and the money goes straight to you, including tips. Stripe takes its standard processing fee. DetailerLogic does not take a cut of your card payments.</p></details>
+      <details name="faq"><summary>Who built DetailerLogic?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Shaun La Bate, a detailer with 31 years in the trade and owner of Impact Detailing, a mobile detailing business in Bensalem, Pennsylvania. Questions go to support@detailerlogic.com.</p></details>
       <details name="faq"><summary>I already have prices. Do I start over?<span class="pm" aria-hidden="true"></span></summary><p class="ans">No. Send a photo of your price list, a link to your site or Facebook, or just your 3 most common jobs. We load them within 24 hours, exactly as you charge now. Send your past-client list too (a screenshot or a Square export) and we load that for you as well.</p></details>
       <details name="faq"><summary>Why not just use Square?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Square is built to take payments for any kind of business. It doesn't price the inside and outside of a car on their own by condition and vehicle size, and it doesn't keep a list of which clients are due back for their next detail. DetailerLogic does both, and takes cards too.<br><br>The cost, straight: Square's free plan is $0 a month. Pro is $59 a month, and we don't take a cut of your card payments. The card processing fee applies either way (Stripe's here, Square's there). One rebooked full detail pays for the month. Core is $29.95 a month.</p></details>
-      <details name="faq"><summary>iPhone or Android?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Both. It runs in your phone's browser. Add it to your home screen and it opens like any other app.</p></details>
-      <details name="faq"><summary>How do card payments work?<span class="pm" aria-hidden="true"></span></summary><p class="ans">You connect your own Stripe account and the money goes straight to you. Stripe takes its standard processing fee. We don't take a cut.</p></details>
       <details name="faq"><summary>Where does the suggested hourly rate come from?<span class="pm" aria-hidden="true"></span></summary><p class="ans">From the income level of your ZIP code and how long you've been detailing. It's a starting point. You set your own rate and can change it any time.</p></details>
       <details name="faq"><summary>What happens when it rains?<span class="pm" aria-hidden="true"></span></summary><p class="ans">The app checks the 7-day forecast against your booked mobile jobs and flags any day at 40% rain or more. One tap writes the reschedule text, and your phone can warn you the night before.</p></details>
       <details name="faq"><summary>Can I cancel?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Any time, no contract. The Founding guarantee stands on top of that: $1,000 in booked jobs in 60 days or every penny back, if you did your part.</p></details>
