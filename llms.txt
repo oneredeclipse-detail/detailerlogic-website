@@ -14,7 +14,7 @@ DetailerLogic is for solo and small mobile or shop detailers who price the car o
 
 - Core: $29.95 per month. Pro: $59 per month, or $497 per year.
 - 14-day Pro trial, no credit card. Cancel anytime.
-- Card payments go to the detailer's own Stripe account. DetailerLogic does not take a cut of those payments. Stripe's standard processing fee applies.
+- Card payments go to the detailer's own Stripe account. DetailerLogic charges 0% on card payments (no DetailerLogic fee on any plan). Stripe's own processing fee applies, and that goes to Stripe, not DetailerLogic.
 - Setup help: send a price sheet and past-client list and DetailerLogic will load them within 24 hours.
 
 ## Guides
